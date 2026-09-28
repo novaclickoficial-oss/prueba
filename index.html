@@ -1,0 +1,719 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Amigos Seafood & Steak House · Santiago de los Caballeros</title>
+<meta name="description" content="Mariscos frescos, cortes Angus y cocina criolla en Santiago de los Caballeros. Primer restaurante dominicano con Récord Guinness y Restaurante del Año 2024.">
+<meta name="theme-color" content="#121014">
+<meta property="og:title" content="Amigos Seafood & Steak House">
+<meta property="og:description" content="Fuego, mar y tradición dominicana en el corazón de Santiago.">
+<meta property="og:image" content="img/fachada-01.webp">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23FAF6EF' stroke='%23C0272D' stroke-width='4'/%3E%3Cpath d='M32 12c3 8 11 12 11 22a11 11 0 0 1-22 0c0-5 3-8 5-11 0 4 2 6 4 7-1-6 0-12 2-18z' fill='%23C0272D'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/fachada-01.webp">
+<style>
+:root{
+  --noche:#121014; --carbon:#1B171B; --carbon-2:#26202A;
+  --rojo:#C0272D; --rojo-vivo:#E0443A; --ambar:#D9A05B; --ambar-suave:#E9C48F;
+  --crema:#F3EBDF; --hueso:#FAF6EF; --tinta:#221D22; --gris:#766E6A; --linea:rgba(34,29,34,.14);
+  --linea-clara:rgba(250,246,239,.16);
+  --serif:"Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --sans:"Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --script:"Great Vibes", "Brush Script MT", cursive;
+  --max:1240px; --gutter:clamp(16px,4vw,40px);
+  --sec:clamp(76px,11vw,148px);
+  color-scheme: light;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--hueso);color:var(--tinta);font-family:var(--sans);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+::selection{background:var(--rojo);color:#fff}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.eyebrow{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--rojo);display:inline-flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor;opacity:.7}
+.dark .eyebrow{color:var(--ambar)}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.04;letter-spacing:-.01em}
+h2{font-size:clamp(40px,6vw,76px)}
+h2 em,h1 em{font-style:italic;color:var(--rojo)}
+.dark h2 em,.dark h1 em{color:var(--ambar-suave)}
+.lead{font-size:clamp(17px,1.6vw,19px);color:var(--gris);max-width:58ch}
+.dark{background:var(--noche);color:var(--hueso)}
+.dark .lead{color:rgba(250,246,239,.72)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 28px;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;border-radius:2px;transition:background .25s,color .25s,border-color .25s,transform .25s;white-space:nowrap}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-rojo{background:var(--rojo);color:#fff}
+.btn-rojo:hover{background:var(--rojo-vivo)}
+.btn-linea{border:1px solid rgba(250,246,239,.5);color:var(--hueso)}
+.btn-linea:hover{background:var(--hueso);color:var(--tinta)}
+.btn-oscuro{border:1px solid var(--tinta);color:var(--tinta)}
+.btn-oscuro:hover{background:var(--tinta);color:var(--hueso)}
+.sec{padding:var(--sec) 0}
+
+/* ---------- Header ---------- */
+.hdr{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .35s, box-shadow .35s, padding .35s;padding:18px 0}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.hdr.solid{background:rgba(18,16,20,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--linea-clara);padding:10px 0}
+.logo{display:flex;align-items:center;gap:10px;color:var(--hueso)}
+.logo .flame{width:22px;height:30px;color:var(--rojo-vivo);flex:none}
+.logo .word{display:flex;flex-direction:column;line-height:1}
+.logo .name{font-family:var(--script);font-size:38px;line-height:.9}
+.logo .tag{font-size:8.5px;letter-spacing:.34em;font-weight:700;opacity:.8;margin-top:4px;padding-left:3px}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(250,246,239,.82);transition:color .2s}
+.nav a:hover{color:#fff}
+.nav .btn{color:#fff;padding:12px 20px}
+.burger{display:none;width:44px;height:44px;align-items:center;justify-content:center;color:var(--hueso)}
+.burger span{display:block;width:22px;height:1.5px;background:currentColor;position:relative;transition:transform .3s}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:22px;height:1.5px;background:currentColor;transition:transform .3s}
+.burger span::before{top:-7px}.burger span::after{top:7px}
+.menu-open .burger span{background:transparent}
+.menu-open .burger span::before{transform:translateY(7px) rotate(45deg)}
+.menu-open .burger span::after{transform:translateY(-7px) rotate(-45deg)}
+@media (max-width:1020px){
+  .burger{display:inline-flex}
+  .nav{position:fixed;inset:0;background:var(--noche);flex-direction:column;justify-content:center;gap:26px;opacity:0;pointer-events:none;transition:opacity .35s}
+  .nav a{font-family:var(--serif);font-size:34px;letter-spacing:0;text-transform:none;font-weight:500}
+  .nav .btn{font-family:var(--sans);font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin-top:10px}
+  .menu-open .nav{opacity:1;pointer-events:auto}
+  .hdr .logo,.burger{position:relative;z-index:2}
+}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:var(--hueso);overflow:hidden;background:var(--noche)}
+.hero-img{position:absolute;inset:0}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:60% 50%;animation:kb 22s ease-out both}
+@keyframes kb{from{transform:scale(1.12)}to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,10,12,.62) 0%,rgba(12,10,12,.18) 34%,rgba(12,10,12,.55) 62%,rgba(12,10,12,.95) 100%)}
+.hero-in{position:relative;z-index:2;width:100%;padding-bottom:clamp(40px,7vh,84px);padding-top:120px}
+.hero .eyebrow{color:var(--ambar-suave)}
+.hero h1{font-size:clamp(50px,9vw,128px);margin:18px 0 22px;max-width:12ch}
+.hero h1 em{color:var(--ambar-suave)}
+.hero p{font-size:clamp(17px,1.7vw,20px);max-width:48ch;color:rgba(250,246,239,.84)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.hero-badges{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:clamp(40px,7vh,72px);padding-top:22px;border-top:1px solid var(--linea-clara)}
+.badge{display:flex;align-items:center;gap:12px;font-size:12.5px;letter-spacing:.06em;color:rgba(250,246,239,.86)}
+.badge b{font-family:var(--serif);font-size:26px;font-weight:500;color:var(--ambar-suave);letter-spacing:0;white-space:nowrap}
+@media (max-width:640px){.hero-cta .btn{flex:1 1 100%}.badge{font-size:12px}
+  .hero::after{background:linear-gradient(180deg,rgba(12,10,12,.7) 0%,rgba(12,10,12,.5) 30%,rgba(12,10,12,.78) 58%,rgba(12,10,12,.97) 100%)}
+  .hero-img img{object-position:72% 50%}}
+
+/* ---------- Marquee ---------- */
+.marquee{background:var(--rojo);color:#fff;overflow:hidden;white-space:nowrap;padding:15px 0;font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
+.marquee-track{display:inline-flex;animation:mq 38s linear infinite}
+.marquee span{padding:0 26px;display:inline-flex;align-items:center;gap:26px}
+.marquee span::after{content:"✦";opacity:.7;font-size:10px}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* ---------- Promesa ---------- */
+.promesa .wrap{display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(40px,7vw,110px);align-items:start}
+.promesa blockquote{font-family:var(--serif);font-size:clamp(32px,4.2vw,56px);line-height:1.12;font-weight:500}
+.promesa blockquote em{color:var(--rojo)}
+.promesa .firma{margin-top:26px;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--gris);font-weight:600}
+.promesa .txt p+p{margin-top:18px}
+.stats{display:grid;grid-template-columns:1fr 1fr;margin-top:44px;border-top:1px solid var(--linea)}
+.stat{padding:24px 0 22px;border-bottom:1px solid var(--linea)}
+.stat:nth-child(odd){padding-right:18px;border-right:1px solid var(--linea)}
+.stat:nth-child(even){padding-left:22px}
+.stat b{display:block;font-family:var(--serif);font-size:clamp(40px,4.4vw,56px);font-weight:500;line-height:1;color:var(--tinta)}
+.stat b small{font-size:.45em;margin-left:4px;color:var(--rojo)}
+.stat span{display:block;font-size:13px;color:var(--gris);margin-top:8px;line-height:1.45}
+@media (max-width:860px){.promesa .wrap{grid-template-columns:1fr}}
+
+/* ---------- Pilares ---------- */
+.pilares{background:var(--crema)}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap;margin-bottom:clamp(40px,6vw,72px)}
+.sec-head h2{margin-top:16px;max-width:15ch}
+.sec-head .lead{max-width:44ch}
+.pil-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2.4vw,32px)}
+.pil{position:relative}
+.pil figure{overflow:hidden;aspect-ratio:3/4;background:var(--carbon)}
+.pil img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.pil:hover img{transform:scale(1.05)}
+.pil .num{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--rojo);margin-top:22px}
+.pil h3{font-size:clamp(28px,2.6vw,36px);margin:4px 0 10px}
+.pil p{color:var(--gris);font-size:15.5px}
+@media (max-width:860px){.pil-grid{grid-template-columns:1fr;gap:48px}.pil figure{aspect-ratio:4/3.4}}
+
+/* ---------- Carta ---------- */
+.carta-head{text-align:center;max-width:760px;margin:0 auto clamp(56px,8vw,96px)}
+.carta-head .eyebrow::after{content:"";width:28px;height:1px;background:currentColor;opacity:.7}
+.carta-head h2{margin:18px 0}
+.carta-head .lead{margin:0 auto}
+.cap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,6vw,96px);align-items:center}
+.cap+.cap{margin-top:clamp(72px,10vw,130px)}
+.cap.rev .cap-img{order:2}
+.cap-img{position:relative}
+.cap-img figure{aspect-ratio:4/5;overflow:hidden;background:var(--carbon)}
+.cap-img img{width:100%;height:100%;object-fit:cover}
+.cap-img .roman{position:absolute;top:-28px;left:-10px;font-family:var(--serif);font-style:italic;font-size:clamp(90px,11vw,150px);line-height:1;color:var(--rojo);opacity:.9;pointer-events:none}
+.cap.rev .roman{left:auto;right:-10px}
+.cap-txt .eyebrow{margin-bottom:14px}
+.cap-txt h3{font-size:clamp(38px,4.4vw,58px);margin-bottom:10px}
+.cap-txt > p{color:var(--gris);margin-bottom:26px;max-width:46ch}
+.platos{list-style:none;border-top:1px solid var(--linea)}
+.plato{display:grid;grid-template-columns:76px 1fr;gap:18px;align-items:center;padding:18px 0;border-bottom:1px solid var(--linea)}
+.plato img{width:76px;height:76px;object-fit:cover;border-radius:50%;cursor:zoom-in}
+.plato h4{font-family:var(--serif);font-size:24px;font-weight:600;line-height:1.15}
+.plato p{font-size:14.5px;color:var(--gris);line-height:1.5;margin-top:3px}
+.pr-p{font-family:var(--sans);font-size:13px;font-weight:700;color:var(--rojo);letter-spacing:.04em;white-space:nowrap;margin-left:6px}
+.plato .mono{width:76px;height:76px;border-radius:50%;background:var(--noche);color:var(--ambar);display:flex;align-items:center;justify-content:center;font-size:26px}
+.menu-full{margin-top:clamp(72px,9vw,120px)}
+.menu-full .mf-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:28px}
+.menu-full .mf-head h3{font-size:clamp(34px,4vw,52px)}
+.menu-full .mf-head p{color:var(--gris);font-size:14px}
+.mf-tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin-bottom:26px;scrollbar-width:none;position:sticky;top:64px;background:var(--hueso);z-index:5;padding-top:10px}
+.mf-tabs::-webkit-scrollbar{display:none}
+.mf-tab{flex:none;padding:10px 16px;border:1px solid var(--linea);font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gris);border-radius:40px;transition:all .2s}
+.mf-tab[aria-selected="true"]{background:var(--tinta);border-color:var(--tinta);color:var(--hueso)}
+.mf-panel{display:none}
+.mf-panel.on{display:block;animation:fi .4s ease}
+@keyframes fi{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.mf-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;column-gap:clamp(32px,5vw,72px)}
+.mf-item{padding:16px 0;border-bottom:1px solid var(--linea)}
+.mf-item .row{display:flex;align-items:baseline;gap:10px}
+.mf-item h4{font-family:var(--serif);font-size:22px;font-weight:600;line-height:1.2}
+.mf-item .dots{flex:1;border-bottom:1px dotted rgba(34,29,34,.3);transform:translateY(-4px);min-width:16px}
+.mf-item .pz{font-size:14px;font-weight:700;color:var(--rojo);white-space:nowrap}
+.mf-item p{font-size:14px;color:var(--gris);line-height:1.5;margin-top:4px}
+.mf-note{margin-top:22px;font-size:13px;color:var(--gris)}
+.mf-guar{display:flex;flex-wrap:wrap;gap:8px;list-style:none}
+.mf-guar li{border:1px solid var(--linea);padding:9px 14px;font-size:14px;border-radius:40px}
+@media (max-width:760px){.mf-list{grid-template-columns:1fr}.mf-tabs{top:60px}}
+.carta-cta{margin-top:clamp(64px,8vw,100px);text-align:center;padding:clamp(34px,5vw,56px) var(--gutter);border:1px solid var(--linea);background:var(--crema)}
+.carta-cta h3{font-size:clamp(28px,3.2vw,40px);margin-bottom:8px}
+.carta-cta p{color:var(--gris);margin-bottom:24px}
+@media (max-width:860px){.cap{grid-template-columns:1fr}.cap.rev .cap-img{order:0}.cap-img figure{aspect-ratio:4/3.6}.cap-img .roman{top:-40px}}
+
+/* ---------- Guinness ---------- */
+.guinness{position:relative;overflow:hidden}
+.guinness .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(40px,6vw,96px);align-items:center}
+.big-num{font-family:var(--serif);font-weight:500;line-height:.82;font-size:clamp(120px,20vw,280px);color:var(--hueso);letter-spacing:-.03em;margin:22px 0 6px}
+.big-num small{font-size:.26em;letter-spacing:0;color:var(--ambar);margin-left:10px;font-style:italic}
+.guinness h2{font-size:clamp(34px,4.4vw,58px);margin-bottom:22px}
+.g-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.chip{border:1px solid var(--linea-clara);padding:9px 14px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:rgba(250,246,239,.8)}
+.g-fotos{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.g-fotos figure{overflow:hidden;background:var(--carbon)}
+.g-fotos figure:first-child{grid-column:1/-1;aspect-ratio:16/11}
+.g-fotos figure:not(:first-child){aspect-ratio:4/5}
+.g-fotos img{width:100%;height:100%;object-fit:cover;cursor:zoom-in}
+.g-fotos figcaption{font-size:12px;color:rgba(250,246,239,.6);padding-top:8px}
+@media (max-width:900px){.guinness .wrap{grid-template-columns:1fr}}
+
+/* ---------- Bar ---------- */
+.bar{background:var(--carbon);color:var(--hueso)}
+.bar .sec-head .lead{color:rgba(250,246,239,.72)}
+.bar-logo{font-family:var(--script);font-size:clamp(64px,8vw,104px);line-height:.9;color:var(--hueso)}
+.bar-logo small{display:block;font-family:var(--sans);font-size:12px;letter-spacing:.34em;text-transform:uppercase;color:var(--ambar);margin-top:6px;font-weight:700}
+.cocteles{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:var(--gutter);padding:0 var(--gutter) 18px;margin:0 calc(var(--gutter) * -1);scrollbar-width:thin;scrollbar-color:var(--ambar) transparent}
+.coctel{flex:0 0 clamp(230px,24vw,300px);scroll-snap-align:start}
+.coctel figure{aspect-ratio:3/4.3;overflow:hidden;background:var(--noche)}
+.coctel img{width:100%;height:100%;object-fit:cover;transition:transform 1s;cursor:zoom-in}
+.coctel:hover img{transform:scale(1.05)}
+.coctel h4{font-family:var(--serif);font-size:24px;font-weight:500;margin-top:14px}
+.coctel p{font-size:13.5px;color:rgba(250,246,239,.62)}
+.bar-duo{display:grid;grid-template-columns:1.25fr 1fr;gap:16px;margin-top:clamp(40px,6vw,72px)}
+.bar-duo figure{overflow:hidden;height:clamp(240px,32vw,440px);background:var(--noche);position:relative}
+.bar-duo img{width:100%;height:100%;object-fit:cover;cursor:zoom-in}
+.cap-over{position:absolute;left:0;bottom:0;right:0;padding:40px 20px 16px;background:linear-gradient(transparent,rgba(12,10,12,.85));font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--hueso);pointer-events:none}
+@media (max-width:760px){.bar-duo{grid-template-columns:1fr}}
+
+/* ---------- Espacios ---------- */
+.bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:clamp(170px,19vw,250px);gap:14px}
+.bento figure{position:relative;overflow:hidden;background:var(--carbon)}
+.bento img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1);cursor:zoom-in}
+.bento figure:hover img{transform:scale(1.05)}
+.b-wide{grid-column:span 2;grid-row:span 2}
+.b-tall{grid-row:span 2}
+.b-long{grid-column:span 2}
+.spots{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:clamp(40px,6vw,64px)}
+.spot h4{font-family:var(--serif);font-size:24px;font-weight:600;margin-bottom:6px}
+.spot p{font-size:14.5px;color:var(--gris)}
+.spot .ic{width:36px;height:36px;color:var(--rojo);margin-bottom:14px}
+@media (max-width:900px){.bento{grid-template-columns:repeat(2,1fr);grid-auto-rows:clamp(170px,44vw,260px)}.b-wide{grid-column:span 2;grid-row:span 1}.b-long{grid-column:span 2}.spots{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.spots{grid-template-columns:1fr}}
+
+/* ---------- Eventos ---------- */
+.eventos{background:var(--crema)}
+.ev-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(40px,6vw,96px);align-items:start}
+.ev-txt{position:sticky;top:110px}
+.ev-txt h2{margin:16px 0 20px}
+.ocasiones{list-style:none;margin:30px 0 34px;border-top:1px solid var(--linea)}
+.ocasiones li{display:flex;justify-content:space-between;gap:16px;padding:15px 0;border-bottom:1px solid var(--linea);font-family:var(--serif);font-size:24px;font-weight:500}
+.ocasiones li span{font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gris);align-self:center;text-align:right}
+.masonry{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.masonry figure{overflow:hidden;background:var(--carbon);aspect-ratio:3/4}
+.masonry img{width:100%;height:100%;object-fit:cover;cursor:zoom-in;transition:transform 1s}
+.masonry figure:hover img{transform:scale(1.04)}
+@media (max-width:900px){.ev-grid{grid-template-columns:1fr}.ev-txt{position:static}}
+@media (max-width:520px){.ocasiones li{font-size:21px}}
+
+/* ---------- Momentos ---------- */
+.eventos .masonry{align-items:start}
+.momentos .masonry{grid-template-columns:repeat(5,1fr);gap:12px}
+.momentos .masonry figure{aspect-ratio:3/4}
+@media (max-width:900px){.momentos .masonry{grid-template-columns:repeat(2,1fr);gap:10px}}
+.ig-cta{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-top:clamp(36px,5vw,56px);padding-top:28px;border-top:1px solid var(--linea)}
+.ig-cta p{font-family:var(--serif);font-size:clamp(24px,2.6vw,32px)}
+.ig-cta p b{color:var(--rojo);font-weight:600}
+
+/* ---------- Prensa ---------- */
+.prensa{background:var(--noche);color:var(--hueso)}
+.pr-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--linea-clara);border:1px solid var(--linea-clara)}
+.pr{background:var(--noche);padding:30px 26px 28px;display:flex;flex-direction:column;gap:18px;min-height:250px;transition:background .3s}
+.pr:hover{background:var(--carbon-2)}
+.pr .medio{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--ambar);font-weight:700}
+.pr h4{font-family:var(--serif);font-size:24px;font-weight:500;line-height:1.2;flex:1}
+.pr .leer{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:rgba(250,246,239,.65);display:flex;align-items:center;gap:8px}
+.pr:hover .leer{color:#fff}
+@media (max-width:1000px){.pr-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.pr-grid{grid-template-columns:1fr}.pr{min-height:0}}
+
+/* ---------- Visita ---------- */
+.visita{background:var(--carbon);color:var(--hueso)}
+.vi-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(40px,6vw,88px);align-items:stretch}
+.vi-grid h2{margin:16px 0 30px}
+.datos{display:grid;gap:0;border-top:1px solid var(--linea-clara)}
+.dato{display:grid;grid-template-columns:130px 1fr;gap:16px;padding:18px 0;border-bottom:1px solid var(--linea-clara)}
+.dato dt{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ambar);font-weight:700;padding-top:4px}
+.dato dd{font-size:17px;color:rgba(250,246,239,.9)}
+.dato a:hover{color:#fff;text-decoration:underline;text-underline-offset:4px}
+.vi-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.mapa{min-height:420px;background:var(--noche);position:relative;overflow:hidden}
+.mapa iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(.85) contrast(1.05) brightness(.9)}
+@media (max-width:900px){.vi-grid{grid-template-columns:1fr}.mapa{min-height:340px}}
+@media (max-width:520px){.dato{grid-template-columns:1fr;gap:4px}}
+
+/* ---------- Footer ---------- */
+.ftr{background:var(--noche);color:rgba(250,246,239,.62);padding:56px 0 110px;font-size:14px}
+.ftr .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.ftr .logo .name{font-size:44px}
+.socials{display:flex;gap:10px}
+.socials a{width:44px;height:44px;border:1px solid var(--linea-clara);display:inline-flex;align-items:center;justify-content:center;border-radius:50%;color:var(--hueso);transition:background .25s,border-color .25s}
+.socials a:hover{background:var(--rojo);border-color:var(--rojo)}
+.socials svg{width:18px;height:18px}
+.ftr-bottom{width:100%;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid var(--linea-clara);padding-top:22px;margin-top:10px;font-size:12.5px}
+@media (min-width:760px){.ftr{padding-bottom:56px}}
+
+/* ---------- WhatsApp flotante ---------- */
+.wa-float{position:fixed;right:16px;bottom:16px;z-index:40;display:flex;align-items:center;gap:10px;background:#1FAF54;color:#fff;padding:14px 18px;border-radius:40px;box-shadow:0 10px 30px rgba(0,0,0,.28);font-size:13px;font-weight:700;letter-spacing:.06em;transition:transform .25s,opacity .3s}
+.wa-float:hover{transform:translateY(-2px)}
+.wa-float svg{width:22px;height:22px}
+.wa-float.hide{opacity:0;pointer-events:none;transform:translateY(12px)}
+
+/* ---------- Lightbox ---------- */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(12,10,12,.96);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s;padding:56px 16px}
+.lb.on{opacity:1;pointer-events:auto}
+.lb img{max-width:min(1200px,100%);max-height:100%;object-fit:contain;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.lb button{position:absolute;color:var(--hueso);width:52px;height:52px;display:flex;align-items:center;justify-content:center;font-size:30px;line-height:1;opacity:.8}
+.lb button:hover{opacity:1}
+.lb .x{top:10px;right:10px}
+.lb .prev{left:6px;top:50%;transform:translateY(-50%)}
+.lb .next{right:6px;top:50%;transform:translateY(-50%)}
+.lb .cnt{position:absolute;bottom:18px;left:0;right:0;text-align:center;font-size:12px;letter-spacing:.2em;color:rgba(250,246,239,.6)}
+
+/* ---------- Reveal ---------- */
+.rv{opacity:0;transform:translateY(28px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .rv{opacity:1;transform:none}
+}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a href="#inicio" class="logo" aria-label="Amigos Seafood & Steak House, inicio">
+      <svg class="flame" viewBox="0 0 22 30" fill="currentColor" aria-hidden="true"><path d="M11 1c1.4 4.3 6.5 7.3 6.5 14.2A6.9 6.9 0 0 1 11 22.4a6.9 6.9 0 0 1-6.6-7.2c0-3.2 1.7-5.3 3-7 0 2.4 1 4 2.4 4.8C9.2 9.3 9.7 4.8 11 1z"/><path d="M11 24.2c-2.6 0-4.3-1.6-4.3-3.8 0-1.6.9-2.6 1.7-3.4.1 1.3.8 2.1 1.6 2.4-.3-1.6.2-3.4 1.4-4.9.6 2.3 3.9 3.3 3.9 6 0 2.1-1.8 3.7-4.3 3.7z" opacity=".55"/><rect x="2" y="27.2" width="18" height="1.3" rx=".6" opacity=".6"/></svg>
+      <span class="word"><span class="name">Amigos</span><span class="tag">SEAFOOD · STEAK HOUSE</span></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="#carta">La carta</a>
+      <a href="#record">Récord Guinness</a>
+      <a href="#bar">Bar</a>
+      <a href="#espacios">Espacios</a>
+      <a href="#eventos">Eventos</a>
+      <a href="#visita">Visítanos</a>
+      <a class="btn btn-rojo" href="https://wa.me/18092260026?text=%C2%A1Hola%2C%20Amigos%21%20Me%20gustar%C3%ADa%20reservar%20una%20mesa." target="_blank" rel="noopener">Reservar</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav"><span></span></button>
+  </div>
+</header>
+
+<main>
+<!-- ================= HERO ================= -->
+<section class="hero" id="inicio">
+  <div class="hero-img">
+    <img src="img/fachada-01.webp" alt="Fachada iluminada de Amigos Seafood & Steak House en la avenida Estrella Sadhalá, Santiago" fetchpriority="high">
+  </div>
+  <div class="wrap hero-in">
+    <span class="eyebrow">Santiago de los Caballeros · República Dominicana</span>
+    <h1>Fuego, mar y <em>tradición</em> dominicana.</h1>
+    <p>Mariscos frescos, cortes Angus a la parrilla y cocina criolla de verdad, servidos con el calor de una casa dominicana.</p>
+    <div class="hero-cta">
+      <a class="btn btn-rojo" href="https://wa.me/18092260026?text=%C2%A1Hola%2C%20Amigos%21%20Me%20gustar%C3%ADa%20reservar%20una%20mesa." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.7-.3-1.5-.7-2.3-1.5-.6-.6-1-1.2-1.2-1.4-.1-.2 0-.4.1-.5l.4-.4.3-.4v-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 1.9 2.9 4.6 4 .6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.4-.3z"/></svg>Reservar una mesa</a>
+      <a class="btn btn-linea" href="#carta">Ver la carta</a>
+    </div>
+    <div class="hero-badges">
+      <div class="badge"><b>556 kg</b>Récord Guinness · Mofongo más grande del mundo</div>
+      <div class="badge"><b>2024</b>Restaurante del Año</div>
+      <div class="badge"><b>4.9</b>Calificación en Tripadvisor</div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Primer restaurante dominicano con Récord Guinness</span><span>Restaurante del Año 2024</span><span>Mariscos premium</span><span>Cortes Angus</span><span>Cocina criolla</span><span>Amigas Bar &amp; Lounge</span>
+    <span>Primer restaurante dominicano con Récord Guinness</span><span>Restaurante del Año 2024</span><span>Mariscos premium</span><span>Cortes Angus</span><span>Cocina criolla</span><span>Amigas Bar &amp; Lounge</span>
+  </div>
+</div>
+
+<!-- ================= PROMESA ================= -->
+<section class="sec promesa" id="nosotros">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">Nuestra promesa</span>
+      <blockquote style="margin-top:22px">“En Amigos no solo servimos comida, servimos <em>memorias</em>.”</blockquote>
+      <p class="firma">Amigos Seafood &amp; Steak House</p>
+    </div>
+    <div class="txt rv d1">
+      <p class="lead">Amigos nació con una idea sencilla: que Santiago se sienta como la capital de la gastronomía dominicana. Por eso cada plato une tres cosas que amamos, el fuego de la parrilla, la frescura del mar y la sazón de nuestras abuelas.</p>
+      <p class="lead">Aquí se celebran cumpleaños, graduaciones y aniversarios, se cierran negocios y se reúne la familia entera. Como en casa de un amigo, nuestras puertas están abiertas todos los días.</p>
+      <div class="stats">
+        <div class="stat"><b>556<small>kg</small></b><span>El mofongo más grande del mundo, certificado por Guinness World Records</span></div>
+        <div class="stat"><b>2024</b><span>Restaurante del Año, reconocido por la Federación Dominicana de Comerciantes</span></div>
+        <div class="stat"><b>4.9</b><span>Calificación de nuestros comensales en Tripadvisor</span></div>
+        <div class="stat"><b>389<small>K</small></b><span>Amigos que nos siguen en Instagram</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PILARES ================= -->
+<section class="sec pilares" id="cocina">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="rv"><span class="eyebrow">Nuestra cocina</span><h2>Tres mundos, <em>un solo</em> plato.</h2></div>
+      <p class="lead rv d1">La tradición dominicana, la frescura del mar y la maestría de la parrilla, en perfecto equilibrio.</p>
+    </div>
+    <div class="pil-grid">
+      <article class="pil rv">
+        <figure><img src="img/plato-03-s.webp" srcset="img/plato-03-s.webp 507w, img/plato-03.webp 1066w" sizes="(max-width:860px) 100vw, 33vw" width="507" height="760" alt="Mofonguitos rellenos de camarones con flores comestibles" loading="lazy" decoding="async" data-lb="img/plato-03.webp"></figure>
+        <p class="num">01</p><h3>Cocina criolla</h3>
+        <p>Recetas que honran nuestra herencia: plátano, sofrito, guisos lentos y el mofongo que nos puso en el libro de los récords.</p>
+      </article>
+      <article class="pil rv d1">
+        <figure><img src="img/plato-07-s.webp" srcset="img/plato-07-s.webp 507w, img/plato-07.webp 1066w" sizes="(max-width:860px) 100vw, 33vw" width="507" height="760" alt="Canasta crujiente de salmón a la parrilla con queso y hojas verdes" loading="lazy" decoding="async" data-lb="img/plato-07.webp"></figure>
+        <p class="num">02</p><h3>Mariscos premium</h3>
+        <p>Pesca fresca preparada y sellada al punto: chillo, mero, langosta, camarones y salmón, con guarniciones elegantes.</p>
+      </article>
+      <article class="pil rv d2">
+        <figure><img src="img/plato-06-s.webp" srcset="img/plato-06-s.webp 507w, img/plato-06.webp 1066w" sizes="(max-width:860px) 100vw, 33vw" width="507" height="760" alt="Ribeye en sartén de hierro con vegetales a la parrilla y mantequilla de hierbas" loading="lazy" decoding="async" data-lb="img/plato-06.webp"></figure>
+        <p class="num">03</p><h3>Cortes Angus</h3>
+        <p>Cortes seleccionados, asados por manos expertas y terminados con mantequilla de hierbas y vegetales al carbón.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CARTA ================= -->
+<section class="sec" id="carta">
+  <div class="wrap">
+    <div class="carta-head rv">
+      <span class="eyebrow">La carta</span>
+      <h2>Una carta en <em>tres capítulos</em>.</h2>
+      <p class="lead">Para compartir, del fuego y del mar. Primero, los platos que nuestros comensales vuelven a pedir; debajo, la carta completa con precios.</p>
+    </div>
+
+    <div class="cap">
+      <div class="cap-img rv"><span class="roman" aria-hidden="true">I</span><figure><img src="img/plato-01-s.webp" srcset="img/plato-01-s.webp 507w, img/plato-01.webp 1066w" sizes="(max-width:860px) 100vw, 50vw" width="507" height="760" alt="Brocheta de camarones con guacamole y pico de gallo" loading="lazy" decoding="async" data-lb="img/plato-01.webp"></figure></div>
+      <div class="cap-txt rv d1">
+        <span class="eyebrow">Capítulo I</span>
+        <h3>Para compartir</h3>
+        <p>Así empieza toda buena mesa dominicana: al centro, para que nadie se quede sin probar.</p>
+        <ul class="platos">
+          <li class="plato"><img src="img/plato-01-s.webp" width="76" height="76" alt="Brocheta de camarones con guacamole" loading="lazy" decoding="async" data-lb="img/plato-01.webp"><div><h4>Brocheta de camarones con guacamole <span class="pr-p">RD$ 595</span></h4><p>Pan artesanal con guacamole y camarón al grill.</p></div></li>
+          <li class="plato"><img src="img/plato-02-s.webp" width="76" height="76" alt="Canasticas de chivo" loading="lazy" decoding="async" data-lb="img/plato-02.webp"><div><h4>Canasticas de chivo <span class="pr-p">RD$ 775</span></h4><p>Chivo jugoso en crujientes canastas de plátano. Sabor criollo en cada bocado.</p></div></li>
+          <li class="plato"><img src="img/plato-03-s.webp" width="76" height="76" alt="Mofonguitos de camarones" loading="lazy" decoding="async" data-lb="img/plato-03.webp"><div><h4>Mofonguitos de camarones <span class="pr-p">RD$ 595</span></h4><p>Plátano majado con ajo, relleno de camarones en crema blanca.</p></div></li>
+          <li class="plato"><img src="img/plato-05-s.webp" width="76" height="76" alt="Palitos de mozzarella" loading="lazy" decoding="async" data-lb="img/plato-05.webp"><div><h4>Palitos de mozzarella <span class="pr-p">RD$ 495</span></h4><p>Crujientes, cubiertos de salsa pomodoro y queso parmesano.</p></div></li>
+          <li class="plato"><img src="img/plato-08-s.webp" width="76" height="76" alt="Dip de espinaca" loading="lazy" decoding="async" data-lb="img/plato-08.webp"><div><h4>Dip de espinaca <span class="pr-p">RD$ 795</span></h4><p>Espinaca fresca, queso ricotta y crema, con trocitos de tocineta.</p></div></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cap rev">
+      <div class="cap-img rv"><span class="roman" aria-hidden="true">II</span><figure><img src="img/plato-04-s.webp" srcset="img/plato-04-s.webp 507w, img/plato-04.webp 1066w" sizes="(max-width:860px) 100vw, 50vw" width="507" height="760" alt="Churrasco Angus a la parrilla sobre papitas y pimientos" loading="lazy" decoding="async" data-lb="img/plato-04.webp"></figure></div>
+      <div class="cap-txt rv d1">
+        <span class="eyebrow">Capítulo II</span>
+        <h3>Del fuego</h3>
+        <p>La parrilla es el corazón de la casa. Cortes Angus a la parrilla, servidos con chimichurri y en su punto.</p>
+        <ul class="platos">
+          <li class="plato"><img src="img/plato-04-s.webp" width="76" height="76" alt="Churrasco Angus Steak" loading="lazy" decoding="async" data-lb="img/plato-04.webp"><div><h4>Churrasco Angus Steak · 10 oz <span class="pr-p">RD$ 2,295</span></h4><p>Tierno y jugoso, con chimichurri de la Patagonia argentina.</p></div></li>
+          <li class="plato"><img src="img/plato-06-s.webp" width="76" height="76" alt="Ribeye Angus Steak" loading="lazy" decoding="async" data-lb="img/plato-06.webp"><div><h4>Ribeye Angus Steak · 20 oz <span class="pr-p">RD$ 3,295</span></h4><p>Corte fresco de res Angus a la parrilla, servido con chimichurri.</p></div></li>
+          <li class="plato"><img src="img/plato-09-s.webp" width="76" height="76" alt="Costilla Baby Back BBQ" loading="lazy" decoding="async" data-lb="img/plato-09.webp"><div><h4>Costilla Baby Back BBQ · 12 oz <span class="pr-p">RD$ 995</span></h4><p>Costilla de cerdo a la parrilla, glaseada en nuestra BBQ.</p></div></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cap">
+      <div class="cap-img rv"><span class="roman" aria-hidden="true">III</span><figure><img src="img/guinness-01-s.webp" srcset="img/guinness-01-s.webp 760w, img/guinness-01.webp 1080w" sizes="(max-width:860px) 100vw, 50vw" width="760" height="619" alt="Mofongo preparado por el equipo de Amigos" loading="lazy" decoding="async" data-lb="img/guinness-01.webp"></figure></div>
+      <div class="cap-txt rv d1">
+        <span class="eyebrow">Capítulo III</span>
+        <h3>Del mar y de mi país</h3>
+        <p>Pescados y mariscos frescos de nuestra costa, y los clásicos criollos que se piden una y otra vez.</p>
+        <ul class="platos">
+          <li class="plato"><img src="img/guinness-01-s.webp" width="76" height="76" alt="Mofongo con camarones" loading="lazy" decoding="async" data-lb="img/guinness-01.webp"><div><h4>Mofongo con camarones <span class="pr-p">RD$ 995</span></h4><p>Plátano majado con camarones, perfumado con ajo. El plato que nos llevó al Récord Guinness.</p></div></li>
+          <li class="plato"><span class="mono" aria-hidden="true">★</span><div><h4>El Monumento de Santiago <span class="pr-p">RD$ 3,495</span></h4><p>Churrasco Angus sobre langostino de nuestra costa, bañado en salsa bechamel. La firma de la casa.</p></div></li>
+          <li class="plato"><img src="img/plato-10-s.webp" width="76" height="76" alt="Pollo Cordon Bleu" loading="lazy" decoding="async" data-lb="img/plato-10.webp"><div><h4>Pollo Cordon Bleu <span class="pr-p">RD$ 995</span></h4><p>Rollo de pollo relleno de mozzarella y jamón, con salsa cremosa blanca.</p></div></li>
+          <li class="plato"><img src="img/plato-07-s.webp" width="76" height="76" alt="Ensalada asiática" loading="lazy" decoding="async" data-lb="img/plato-07.webp"><div><h4>Ensalada asiática <span class="pr-p">RD$ 995</span></h4><p>Mix de lechugas con salmón a la parrilla, manzana y sésamo, con spicy mayo.</p></div></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="menu-full rv" id="carta-completa"><div class="mf-head"><h3>La carta completa</h3><p>Precios en pesos dominicanos · Impuestos no incluidos</p></div><div class="mf-tabs" role="tablist" aria-label="Categorías de la carta"><button class="mf-tab" role="tab" id="t-mf-entradas" aria-controls="mf-entradas" aria-selected="true" tabindex="0">Entradas</button><button class="mf-tab" role="tab" id="t-mf-ensaladas" aria-controls="mf-ensaladas" aria-selected="false" tabindex="-1">Ensaladas</button><button class="mf-tab" role="tab" id="t-mf-caldos" aria-controls="mf-caldos" aria-selected="false" tabindex="-1">Caldos</button><button class="mf-tab" role="tab" id="t-mf-tipico-de-mi-pais" aria-controls="mf-tipico-de-mi-pais" aria-selected="false" tabindex="-1">Típico de mi país</button><button class="mf-tab" role="tab" id="t-mf-cortes-cerdo" aria-controls="mf-cortes-cerdo" aria-selected="false" tabindex="-1">Cortes &amp; cerdo</button><button class="mf-tab" role="tab" id="t-mf-pescados-mariscos" aria-controls="mf-pescados-mariscos" aria-selected="false" tabindex="-1">Pescados &amp; mariscos</button><button class="mf-tab" role="tab" id="t-mf-arroces" aria-controls="mf-arroces" aria-selected="false" tabindex="-1">Arroces</button><button class="mf-tab" role="tab" id="t-mf-aves" aria-controls="mf-aves" aria-selected="false" tabindex="-1">Aves</button><button class="mf-tab" role="tab" id="t-mf-pastas" aria-controls="mf-pastas" aria-selected="false" tabindex="-1">Pastas</button><button class="mf-tab" role="tab" id="t-mf-hamburguesas" aria-controls="mf-hamburguesas" aria-selected="false" tabindex="-1">Hamburguesas</button><button class="mf-tab" role="tab" id="t-mf-postres" aria-controls="mf-postres" aria-selected="false" tabindex="-1">Postres</button><button class="mf-tab" role="tab" id="t-mf-guarniciones" aria-controls="mf-guarniciones" aria-selected="false" tabindex="-1">Guarniciones</button></div><div class="mf-panel on" role="tabpanel" id="mf-entradas" aria-labelledby="t-mf-entradas"><ul class="mf-list"><li class="mf-item"><div class="row"><h4>Croquetas de pollo</h4><span class="dots"></span><span class="pz">RD$ 495</span></div><p>Croquetas jugosas de pechuga de pollo, con nuestro aderezo de la casa.</p></li><li class="mf-item"><div class="row"><h4>Palitos de mozzarella</h4><span class="dots"></span><span class="pz">RD$ 495</span></div><p>Crujientes, cubiertos de salsa pomodoro y queso parmesano.</p></li><li class="mf-item"><div class="row"><h4>Dip de espinaca</h4><span class="dots"></span><span class="pz">RD$ 795</span></div><p>Espinaca fresca, queso ricotta y crema fresca, con trocitos de tocineta.</p></li><li class="mf-item"><div class="row"><h4>Brocheta de camarones con guacamole</h4><span class="dots"></span><span class="pz">RD$ 595</span></div><p>Pan artesanal con guacamole y camarón al grill.</p></li><li class="mf-item"><div class="row"><h4>Brochetas de pulpo a la parrilla</h4><span class="dots"></span><span class="pz">RD$ 995</span></div><p>Pulpo a la parrilla sobre pan dorado, terminado con pulpo trinchado.</p></li><li class="mf-item"><div class="row"><h4>Ceviche de pescado</h4><span class="dots"></span><span class="pz">RD$ 895</span></div><p>Pescado fresco curado en limón, sal y vegetales del huerto.</p></li><li class="mf-item"><div class="row"><h4>Ceviche de camarones</h4><span class="dots"></span><span class="pz">RD$ 995</span></div><p>Camarón fresco curado en limón, sal y vegetales frescos.</p></li><li class="mf-item"><div class="row"><h4>Croquetas de salmón</h4><span class="dots"></span><span class="pz">RD$ 595</span></div><p>Salmón fresco en crocante fritura, con salsa tártara.</p></li><li class="mf-item"><div class="row"><h4>Canasticas de chivo</h4><span class="dots"></span><span class="pz">RD$ 775</span></div><p>Chivo jugoso en crujientes canastas de plátano.</p></li><li class="mf-item"><div class="row"><h4>Mofonguitos de camarones</h4><span class="dots"></span><span class="pz">RD$ 595</span></div><p>Plátano majado con ajo, relleno de camarones en crema blanca.</p></li><li class="mf-item"><div class="row"><h4>Calamares empanizados</h4><span class="dots"></span><span class="pz">RD$ 695</span></div><p>Anillos de calamar crujientes, con salsa tártara.</p></li><li class="mf-item"><div class="row"><h4>Bastoncitos de mero</h4><span class="dots"></span><span class="pz">RD$ 595</span></div><p>Bastoncitos rellenos de filete de mero.</p></li></ul></div><div class="mf-panel" role="tabpanel" id="mf-ensaladas" aria-labelledby="t-mf-ensaladas"><ul class="mf-list"><li class="mf-item"><div class="row"><h4>César con pollo</h4><span class="dots"></span><span class="pz">RD$ 695</span></div><p>Aderezo César y pechuga al grill trinchada.</p></li><li class="mf-item"><div class="row"><h4>César con camarones</h4><span class="dots"></span><span class="pz">RD$ 995</span></div><p>Lechugas, camarones al grill, tomate cherry y aguacate, con aderezo César.</p></li><li class="mf-item"><div class="row"><h4>Amigos por siempre</h4><span class="dots"></span><span class="pz">RD$ 795</span></div><p>Lechugas, tirilla de pollo, mix de quesos, aguacate y tomate cherry, con spicy mayo de cilantro.</p></li><li class="mf-item"><div class="row"><h4>Ensalada asiática</h4><span class="dots"></span><span class="pz">RD$ 995</span></div><p>Mix de lechugas con salmón a la parrilla, manzana y sésamo, con spicy mayo.</p></li></ul></div><div class="mf-panel" role="tabpanel" id="mf-caldos" aria-labelledby="t-mf-caldos"><ul class="mf-list"><li class="mf-item"><div class="row"><h4>Sopa de pollo</h4><span class="dots"></span><span class="pz">RD$ 795</span></div><p>Caldo de filete de pollo y vegetales del valle de Constanza, perfumado con cilantro.</p></li><li class="mf-item"><div class="row"><h4>Sopa de pescado</h4><span class="dots"></span><span class="pz">RD$ 895</span></div><p>Pescado fresco de la costa norte, vegetales, ajo y vino blanco al cilantro.</p></li><li class="mf-item"><div class="row"><h4>Cazuela de mariscos</h4><span class="dots"></span><span class="pz">RD$ 1,595</span></div><p>Mariscos con un sabor criollo gourmet.</p></li></ul></div><div class="mf-panel" role="tabpanel" id="mf-tipico-de-mi-pais" aria-labelledby="t-mf-tipico-de-mi-pais"><ul class="mf-list"><li class="mf-item"><div class="row"><h4>El Monumento de Santiago</h4><span class="dots"></span><span class="pz">RD$ 3,495</span></div><p>Churrasco Angus sobre langostino de nuestra costa, bañado en salsa bechamel.</p></li><li class="mf-item"><div class="row"><h4>Mofongo con camarones</h4><span class="dots"></span><span class="pz">RD$ 995</span></div><p>Plátano majado con camarones, perfumado con ajo.</p></li><li class="mf-item"><div class="row"><h4>Mofongo de chicharrones</h4><span class="dots"></span><span class="pz">RD$ 895</span></div><p>Plátano majado con chicharrón de la casa y ajo.</p></li><li class="mf-item"><div class="row"><h4>Mofongo con pollo</h4><span class="dots"></span><span class="pz">RD$ 795</span></div><p>Plátano majado con pollo, perfumado con ajo.</p></li><li class="mf-item"><div class="row"><h4>Chivo liniero picante sin hueso · 18 oz</h4><span class="dots"></span><span class="pz">RD$ 1,495</span></div><p>Guiso de chivo con orégano, cilantro fresco y un toque de picante. Ensalsado al vino.</p></li><li class="mf-item"><div class="row"><h4>Rabo encendido</h4><span class="dots"></span><span class="pz">RD$ 1,695</span></div><p>Estofado de rabo de res picante con pimienta negra y vino tinto, en salsa roja.</p></li><li class="mf-item"><div class="row"><h4>Chicharrón belly</h4><span class="dots"></span><span class="pz">RD$ 1,395</span></div><p>Chicharrón artesanal dorado y crujiente, sazonado al estilo tradicional.</p></li></ul></div><div class="mf-panel" role="tabpanel" id="mf-cortes-cerdo" aria-labelledby="t-mf-cortes-cerdo"><ul class="mf-list"><li class="mf-item"><div class="row"><h4>Filete Mignon Angus Steak</h4><span class="dots"></span><span class="pz">RD$ 1,695</span></div><p>Filete de res con salsa de champiñón y tocineta.</p></li><li class="mf-item"><div class="row"><h4>Churrasco Angus Steak · 10 oz</h4><span class="dots"></span><span class="pz">RD$ 2,295</span></div><p>A la parrilla, con chimichurri de la Patagonia argentina.</p></li><li class="mf-item"><div class="row"><h4>Striploin Angus Steak · 16 oz</h4><span class="dots"></span><span class="pz">RD$ 2,695</span></div><p>Marinado con sal, pimienta y ajo, a la parrilla con chimichurri.</p></li><li class="mf-item"><div class="row"><h4>Ribeye Angus Steak · 20 oz</h4><span class="dots"></span><span class="pz">RD$ 3,295</span></div><p>Corte fresco de res Angus a la parrilla, con chimichurri.</p></li><li class="mf-item"><div class="row"><h4>Tomahawk Angus Steak · 56 oz</h4><span class="dots"></span><span class="pz">RD$ 6,995</span></div><p>Corte Angus a la parrilla, servido con chimichurri. Para compartir.</p></li><li class="mf-item"><div class="row"><h4>Picaña · 16 oz</h4><span class="dots"></span><span class="pz">RD$ 2,195</span></div><p>Un corte muy especial a la parrilla, con chimichurri.</p></li><li class="mf-item"><div class="row"><h4>Filete de res importado Angus</h4><span class="dots"></span><span class="pz">RD$ 1,495</span></div><p>A la cocción de tu preferencia, con nuestro chimichurri.</p></li><li class="mf-item"><div class="row"><h4>Paletillas de cordero al grill · 5 unidades</h4><span class="dots"></span><span class="pz">RD$ 2,495</span></div><p>Con la guarnición de tu preferencia.</p></li><li class="mf-item"><div class="row"><h4>Costilla Baby Back BBQ · 12 oz</h4><span class="dots"></span><span class="pz">RD$ 995</span></div><p>Costilla de cerdo a la parrilla, glaseada en nuestra BBQ.</p></li><li class="mf-item"><div class="row"><h4>Filete de cerdo · 10 oz</h4><span class="dots"></span><span class="pz">RD$ 995</span></div><p>Con una exquisita salsa balsámica.</p></li></ul></div><div class="mf-panel" role="tabpanel" id="mf-pescados-mariscos" aria-labelledby="t-mf-pescados-mariscos"><ul class="mf-list"><li class="mf-item"><div class="row"><h4>Salmón a la parrilla</h4><span class="dots"></span><span class="pz">RD$ 1,295</span></div><p>Adobado con ajo, aceite de oliva, sal y pimienta.</p></li><li class="mf-item"><div class="row"><h4>Filete de dorado al grill</h4><span class="dots"></span><span class="pz">RD$ 1,495</span></div><p>Pescado fresco al grill con sal y pimienta.</p></li><li class="mf-item"><div class="row"><h4>Chillo entero al ajillo · lb</h4><span class="dots"></span><span class="pz">RD$ 1,995</span></div><p>Red snapper entero en salsa de ajo.</p></li><li class="mf-item"><div class="row"><h4>Chillo entero frito · lb</h4><span class="dots"></span><span class="pz">RD$ 1,795</span></div><p>Red snapper entero, frito.</p></li><li class="mf-item"><div class="row"><h4>Chillo entero al vapor · lb</h4><span class="dots"></span><span class="pz">RD$ 1,995</span></div><p>Red snapper entero, al vapor.</p></li><li class="mf-item"><div class="row"><h4>Camarones al grill</h4><span class="dots"></span><span class="pz">RD$ 1,495</span></div><p>Salteados con vegetales a la parrilla.</p></li><li class="mf-item"><div class="row"><h4>Camarones al ajillo</h4><span class="dots"></span><span class="pz">RD$ 1,495</span></div><p>En salsa de ajo.</p></li><li class="mf-item"><div class="row"><h4>Camarones en salsa criolla</h4><span class="dots"></span><span class="pz">RD$ 1,495</span></div><p>Frescos y jugosos, en salsa criolla.</p></li><li class="mf-item"><div class="row"><h4>Langosta thermidor · 1 lb</h4><span class="dots"></span><span class="pz">RD$ 2,295</span></div><p>Salsa thermidor de hongos, cebolla, mostaza, vino blanco y crema.</p></li><li class="mf-item"><div class="row"><h4>Langosta al ajillo · 1 lb</h4><span class="dots"></span><span class="pz">RD$ 2,295</span></div><p>A la parrilla con salsa de ajo.</p></li><li class="mf-item"><div class="row"><h4>Langosta a la criolla · 1 lb</h4><span class="dots"></span><span class="pz">RD$ 2,295</span></div><p>En nuestra salsa tradicional con vegetales del valle de Constanza.</p></li><li class="mf-item"><div class="row"><h4>Langosta rebozada de camarones a la crema</h4><span class="dots"></span><span class="pz">RD$ 2,695</span></div><p>Langosta bañada de camarones jugosos a la crema.</p></li><li class="mf-item"><div class="row"><h4>Cola de langosta</h4><span class="dots"></span><span class="pz">RD$ 3,295</span></div><p>Bañada en salsa al ajillo.</p></li><li class="mf-item"><div class="row"><h4>Pulpo a la brasa</h4><span class="dots"></span><span class="pz">RD$ 2,495</span></div><p>Sobre una cama de papas salteadas.</p></li></ul></div><div class="mf-panel" role="tabpanel" id="mf-arroces" aria-labelledby="t-mf-arroces"><ul class="mf-list"><li class="mf-item"><div class="row"><h4>Arroz con camarones</h4><span class="dots"></span><span class="pz">RD$ 995</span></div><p>Camarones frescos y vegetales salteados, aromatizados con vino blanco.</p></li><li class="mf-item"><div class="row"><h4>Arroz con mariscos</h4><span class="dots"></span><span class="pz">RD$ 1,295</span></div><p>Langostinos, ostras, almejas y vegetales, al vino blanco.</p></li><li class="mf-item"><div class="row"><h4>Paella para 2 personas</h4><span class="dots"></span><span class="pz">RD$ 2,500</span></div><p>Mariscos frescos de nuestra costa.</p></li></ul></div><div class="mf-panel" role="tabpanel" id="mf-aves" aria-labelledby="t-mf-aves"><ul class="mf-list"><li class="mf-item"><div class="row"><h4>Pechuga de pollo al grill</h4><span class="dots"></span><span class="pz">RD$ 795</span></div><p>A la parrilla, con salsa chimichurri.</p></li><li class="mf-item"><div class="row"><h4>Pollo Cordon Bleu</h4><span class="dots"></span><span class="pz">RD$ 995</span></div><p>Relleno de mozzarella y jamón, con salsa cremosa blanca.</p></li><li class="mf-item"><div class="row"><h4>Chicken Parmesan</h4><span class="dots"></span><span class="pz">RD$ 995</span></div><p>Pechuga empanizada spicy con pomodoro, mozzarella y pepperoni.</p></li></ul></div><div class="mf-panel" role="tabpanel" id="mf-pastas" aria-labelledby="t-mf-pastas"><ul class="mf-list"><li class="mf-item"><div class="row"><h4>Pasta Amigos</h4><span class="dots"></span><span class="pz">RD$ 995</span></div><p>Filete de res salteado con champiñones en salsa blanca y parmesano.</p></li><li class="mf-item"><div class="row"><h4>Pasta frutti di mare</h4><span class="dots"></span><span class="pz">RD$ 1,495</span></div><p>Mejillones, calamares y langostinos en salsa cajún al vino.</p></li><li class="mf-item"><div class="row"><h4>Pasta pomodoro con camarones</h4><span class="dots"></span><span class="pz">RD$ 995</span></div><p>Camarones frescos, salsa pomodoro y parmesano.</p></li><li class="mf-item"><div class="row"><h4>Pasta al natural con filete Angus</h4><span class="dots"></span><span class="pz">RD$ 995</span></div><p>Salteada con vegetales frescos y filete de res.</p></li><li class="mf-item"><div class="row"><h4>Pasta al pesto con pollo</h4><span class="dots"></span><span class="pz">RD$ 795</span></div><p>Pesto de albahaca con pechuga trinchada y parmesano.</p></li><li class="mf-item"><div class="row"><h4>Pasta Alfredo con pollo</h4><span class="dots"></span><span class="pz">RD$ 795</span></div><p>Salsa Alfredo con filete de pollo al grill trinchado.</p></li><li class="mf-item"><div class="row"><h4>Pasta carbonara</h4><span class="dots"></span><span class="pz">RD$ 795</span></div><p>Salsa cremosa a base de tocineta fresca.</p></li><li class="mf-item"><div class="row"><h4>Pasta al natural con pollo</h4><span class="dots"></span><span class="pz">RD$ 795</span></div><p>Salteada con vegetales frescos y pechuga trinchada.</p></li></ul></div><div class="mf-panel" role="tabpanel" id="mf-hamburguesas" aria-labelledby="t-mf-hamburguesas"><ul class="mf-list"><li class="mf-item"><div class="row"><h4>Hamburguesa doble carne Angus Steak</h4><span class="dots"></span><span class="pz">RD$ 995</span></div><p>Doble carne Angus, queso americano, lechuga, tomate y cebolla.</p></li><li class="mf-item"><div class="row"><h4>Cheeseburger Angus Steak</h4><span class="dots"></span><span class="pz">RD$ 795</span></div><p>Carne Angus, queso americano, tomate, lechuga y cebolla.</p></li><li class="mf-item"><div class="row"><h4>Chicken and bacon burger</h4><span class="dots"></span><span class="pz">RD$ 795</span></div><p>Pechuga empanizada, queso americano, tocineta, lechuga y tomate.</p></li><li class="mf-item"><div class="row"><h4>Chicken burger</h4><span class="dots"></span><span class="pz">RD$ 695</span></div><p>Pechuga al grill, queso americano, tomate, lechuga y aderezo de la casa.</p></li></ul></div><div class="mf-panel" role="tabpanel" id="mf-postres" aria-labelledby="t-mf-postres"><ul class="mf-list"><li class="mf-item"><div class="row"><h4>Brownie a la moda</h4><span class="dots"></span><span class="pz">RD$ 695</span></div><p>Brownie caliente con helado de vainilla, sirope de chocolate y almendra tostada.</p></li><li class="mf-item"><div class="row"><h4>Cheesecake de chinola</h4><span class="dots"></span><span class="pz">RD$ 495</span></div><p>Tarta cremosa con zumo de chinola y queso crema.</p></li><li class="mf-item"><div class="row"><h4>Cheesecake de fresa</h4><span class="dots"></span><span class="pz">RD$ 495</span></div><p>Queso crema con topping de fresa.</p></li><li class="mf-item"><div class="row"><h4>Cheesecake de brownie</h4><span class="dots"></span><span class="pz">RD$ 495</span></div><p>Queso crema con topping de brownie.</p></li><li class="mf-item"><div class="row"><h4>Flan de leche</h4><span class="dots"></span><span class="pz">RD$ 395</span></div><p>El tradicional, con base de caramelo.</p></li></ul></div><div class="mf-panel" role="tabpanel" id="mf-guarniciones" aria-labelledby="t-mf-guarniciones"><ul class="mf-guar"><li>Papas fritas</li><li>Fritos verdes</li><li>Yuquitas fritas</li><li>Vegetales salteados</li><li>Vegetales al grill</li><li>Puré de papas</li><li>Puré de cepa de apio</li><li>Muff de yuca</li><li>Papas salteadas</li><li>Arroz blanco</li><li>Moro de guandules</li><li>Arroz especial (tocineta y plátano maduro)</li><li>Ensalada verde</li></ul><p class="mf-note">Todas las guarniciones: RD$ 200 + impuestos.</p></div><div class="carta-cta" style="margin-top:48px"><h3>¿Listo para ordenar?</h3><p>Reserva tu mesa o pregúntanos por los especiales del día por WhatsApp.</p><a class="btn btn-rojo" href="https://wa.me/18092260026?text=%C2%A1Hola%2C%20Amigos%21%20Me%20gustar%C3%ADa%20reservar%20una%20mesa." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.7-.3-1.5-.7-2.3-1.5-.6-.6-1-1.2-1.2-1.4-.1-.2 0-.4.1-.5l.4-.4.3-.4v-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 1.9 2.9 4.6 4 .6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.4-.3z"/></svg>Reservar una mesa</a></div></div>
+  </div>
+</section>
+
+<!-- ================= GUINNESS ================= -->
+<section class="sec dark guinness" id="record">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">Récord Guinness · Julio 2025</span>
+      <div class="big-num">556<small>kg</small></div>
+      <h2>El mofongo <em>más grande</em> del mundo.</h2>
+      <p class="lead">En el Parque Central de Santiago, cientos de personas vieron cómo nuestro equipo preparó un mofongo de 556 kilogramos (1,226.8 libras). Guinness World Records lo certificó ahí mismo, y Amigos se convirtió en el primer restaurante dominicano en lograr un Récord Guinness.</p>
+      <p class="lead" style="margin-top:16px">No fue un récord de Santiago. Fue un orgullo de toda la patria, y el mofongo dominicano en el mapa de la gastronomía mundial.</p>
+      <div class="g-meta"><span class="chip">Certificado oficial Guinness</span><span class="chip">Parque Central, Santiago</span><span class="chip">1,226.8 libras</span></div>
+    </div>
+    <div class="g-fotos rv d1">
+      <figure><img src="img/guinness-02-s.webp" srcset="img/guinness-02-s.webp 760w, img/guinness-02.webp 1078w" sizes="(max-width:900px) 100vw, 52vw" width="760" height="489" alt="Equipo de cocineros de Amigos con el certificado Guinness World Records" loading="lazy" decoding="async" data-lb="img/guinness-02.webp"></figure>
+      <figure><img src="img/guinness-01-s.webp" srcset="img/guinness-01-s.webp 760w, img/guinness-01.webp 1080w" sizes="(max-width:900px) 50vw, 26vw" width="760" height="619" alt="Cocinera sirviendo el mofongo gigante frente a la pantalla con el logo de Amigos" loading="lazy" decoding="async" data-lb="img/guinness-01.webp"></figure>
+      <figure><img src="img/prensa-01-s.webp" srcset="img/prensa-01-s.webp 403w, img/prensa-01.webp 848w" sizes="(max-width:900px) 50vw, 26vw" width="403" height="760" alt="Nota de prensa: Amigos, primer restaurante dominicano en alcanzar un Récord Guinness" loading="lazy" decoding="async" data-lb="img/prensa-01.webp"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BAR ================= -->
+<section class="sec bar" id="bar">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="rv"><span class="eyebrow">Bar &amp; lounge</span><div class="bar-logo" style="margin-top:14px">Amigas<small>Bar &amp; Lounge</small></div></div>
+      <p class="lead rv d1">Cócteles clásicos y frozen de fruta, whisky y ron bien servidos, y una barra iluminada para quedarse después de la cena.</p>
+    </div>
+    <div class="cocteles rv">
+      <article class="coctel"><figure><img src="img/coctel-03-s.webp" srcset="img/coctel-03-s.webp 507w, img/coctel-03.webp 1066w" sizes="(max-width:760px) 70vw, 300px" width="507" height="760" alt="Cosmopolitan con splash, limón y hierbabuena" loading="lazy" decoding="async" data-lb="img/coctel-03.webp"></figure><h4>Cosmopolitan</h4><p>Cítrico, frío y con carácter.</p></article>
+      <article class="coctel"><figure><img src="img/coctel-01-s.webp" srcset="img/coctel-01-s.webp 507w, img/coctel-01.webp 1066w" sizes="(max-width:760px) 70vw, 300px" width="507" height="760" alt="Old Fashioned en vaso tallado con cáscara de naranja" loading="lazy" decoding="async" data-lb="img/coctel-01.webp"></figure><h4>Old Fashioned</h4><p>Whisky, amargo y piel de naranja.</p></article>
+      <article class="coctel"><figure><img src="img/coctel-06-s.webp" srcset="img/coctel-06-s.webp 507w, img/coctel-06.webp 1066w" sizes="(max-width:760px) 70vw, 300px" width="507" height="760" alt="Cóctel tropical de naranja con escarchado de colores" loading="lazy" decoding="async" data-lb="img/coctel-06.webp"></figure><h4>Tropical de naranja</h4><p>Escarchado de colores y fruta fresca.</p></article>
+      <article class="coctel"><figure><img src="img/coctel-07-s.webp" srcset="img/coctel-07-s.webp 507w, img/coctel-07.webp 1066w" sizes="(max-width:760px) 70vw, 300px" width="507" height="760" alt="Margarita frozen de fresa con escarchado rojo" loading="lazy" decoding="async" data-lb="img/coctel-07.webp"></figure><h4>Margarita de fresa</h4><p>Frozen, con escarchado rojo.</p></article>
+      <article class="coctel"><figure><img src="img/coctel-05-s.webp" srcset="img/coctel-05-s.webp 506w, img/coctel-05.webp 1066w" sizes="(max-width:760px) 70vw, 300px" width="506" height="760" alt="Daiquiri de fresa con cereza en copa" loading="lazy" decoding="async" data-lb="img/coctel-05.webp"></figure><h4>Daiquiri de fresa</h4><p>Un clásico del Caribe, con cereza.</p></article>
+      <article class="coctel"><figure><img src="img/coctel-02-s.webp" srcset="img/coctel-02-s.webp 507w, img/coctel-02.webp 1066w" sizes="(max-width:760px) 70vw, 300px" width="507" height="760" alt="Frozen rojo con limón deshidratado" loading="lazy" decoding="async" data-lb="img/coctel-02.webp"></figure><h4>Frozen de la casa</h4><p>Fruta roja y limón deshidratado.</p></article>
+    </div>
+    <div class="bar-duo">
+      <figure class="rv"><img src="img/bar-01-s.webp" srcset="img/bar-01-s.webp 760w, img/bar-01.webp 1600w" sizes="(max-width:760px) 100vw, 56vw" width="760" height="506" alt="Barra iluminada de Amigas Bar &amp; Lounge con botellas y banquetas" loading="lazy" decoding="async" data-lb="img/bar-01.webp"><span class="cap-over">La barra</span></figure>
+      <figure class="rv d1"><img src="img/lounge-01-s.webp" srcset="img/lounge-01-s.webp 760w, img/lounge-01.webp 1600w" sizes="(max-width:760px) 100vw, 44vw" width="760" height="506" alt="Lounge con butacas junto a los ventanales" loading="lazy" decoding="async" data-lb="img/lounge-01.webp"><span class="cap-over">El lounge</span></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ESPACIOS ================= -->
+<section class="sec" id="espacios">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="rv"><span class="eyebrow">Nuestros espacios</span><h2>Un rincón para <em>cada foto</em>.</h2></div>
+      <p class="lead rv d1">Salones bajo flores de cerezo, una barra tropical, lounge, terraza y salones privados. Cada ambiente tiene su personalidad.</p>
+    </div>
+    <div class="bento">
+      <figure class="b-wide rv"><img src="img/salon-01-s.webp" srcset="img/salon-01-s.webp 760w, img/salon-01.webp 1600w" sizes="(max-width:900px) 100vw, 50vw" width="760" height="506" alt="Salón con techo de flores de cerezo, mesas de madera y sillas blancas" loading="lazy" decoding="async" data-lb="img/salon-01.webp"><span class="cap-over">Salón de los cerezos</span></figure>
+      <figure class="b-tall rv d1"><img src="img/clientes-02-s.webp" srcset="img/clientes-02-s.webp 570w, img/clientes-02.webp 1200w" sizes="(max-width:900px) 50vw, 25vw" width="570" height="760" alt="Cliente en la Vespa roja Pacha dentro del restaurante" loading="lazy" decoding="async" data-lb="img/clientes-02.webp"><span class="cap-over">La Vespa “Pacha”</span></figure>
+      <figure class="b-tall rv d2"><img src="img/clientes-11-s.webp" srcset="img/clientes-11-s.webp 428w, img/clientes-11.webp 901w" sizes="(max-width:900px) 50vw, 25vw" width="428" height="760" alt="Columpio blanco con flores y el logo de Amigos" loading="lazy" decoding="async" data-lb="img/clientes-11.webp"><span class="cap-over">El columpio</span></figure>
+      <figure class="b-long rv"><img src="img/salon-02-s.webp" srcset="img/salon-02-s.webp 760w, img/salon-02.webp 1600w" sizes="(max-width:900px) 100vw, 50vw" width="760" height="506" alt="Salón principal con paneles de madera e iluminación lineal" loading="lazy" decoding="async" data-lb="img/salon-02.webp"><span class="cap-over">Salón principal</span></figure>
+      <figure class="b-long rv d1"><img src="img/evento-06-s.webp" srcset="img/evento-06-s.webp 428w, img/evento-06.webp 901w" sizes="(max-width:900px) 100vw, 50vw" width="428" height="760" alt="Salón privado con mesa larga decorada en tonos rosa y dorado" loading="lazy" decoding="async" data-lb="img/evento-06.webp"><span class="cap-over">Salones privados</span></figure>
+    </div>
+    <div class="spots">
+      <div class="spot rv"><svg class="ic" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M18 31c-6-5-11-9-11-15a6 6 0 0 1 11-3 6 6 0 0 1 11 3c0 6-5 10-11 15z"/></svg><h4>Para parejas</h4><p>Rincones íntimos, flores y luz cálida para aniversarios y citas.</p></div>
+      <div class="spot rv d1"><svg class="ic" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="11" r="4"/><circle cx="24" cy="11" r="4"/><path d="M4 30c0-5 4-9 8-9s8 4 8 9M16 30c0-5 4-9 8-9s8 4 8 9"/></svg><h4>Para la familia</h4><p>Mesas largas para todos y un área de juegos para los más pequeños.</p></div>
+      <div class="spot rv d2"><svg class="ic" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="5" y="9" width="26" height="19" rx="1"/><circle cx="18" cy="18.5" r="5"/><path d="M12 9l2-3h8l2 3"/></svg><h4>Para las fotos</h4><p>La Vespa, el columpio y los techos de flores ya son un clásico de Instagram.</p></div>
+      <div class="spot rv d3"><svg class="ic" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M8 30V13l10-7 10 7v17"/><path d="M14 30v-8h8v8"/></svg><h4>Salones privados</h4><p>Espacios reservados para reuniones, celebraciones y cenas de empresa.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EVENTOS ================= -->
+<section class="sec eventos" id="eventos">
+  <div class="wrap ev-grid">
+    <div class="ev-txt rv">
+      <span class="eyebrow">Eventos &amp; celebraciones</span>
+      <h2>Tu celebración, <em>a tu manera</em>.</h2>
+      <p class="lead">Montamos la mesa con tus colores, tus flores y tu nombre en cada plato. Tú invitas, nosotros nos ocupamos del resto.</p>
+      <ul class="ocasiones">
+        <li>Cumpleaños y 15 años <span>Decoración a medida</span></li>
+        <li>Aniversarios <span>Mesas íntimas</span></li>
+        <li>Graduaciones <span>Grupos grandes</span></li>
+        <li>Bodas y compromisos <span>Salón privado</span></li>
+        <li>Reuniones y empresas <span>Menú cerrado</span></li>
+      </ul>
+      <a class="btn btn-rojo" href="https://wa.me/18092260026?text=%C2%A1Hola%2C%20Amigos%21%20Quiero%20cotizar%20un%20evento.%20Fecha%3A%20___%20%C2%B7%20Personas%3A%20___%20%C2%B7%20Tipo%20de%20celebraci%C3%B3n%3A%20___" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.7-.3-1.5-.7-2.3-1.5-.6-.6-1-1.2-1.2-1.4-.1-.2 0-.4.1-.5l.4-.4.3-.4v-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 1.9 2.9 4.6 4 .6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.4-.3z"/></svg>Cotizar mi evento</a>
+    </div>
+    <div class="masonry">
+      <figure class="rv"><img src="img/evento-04-s.webp" srcset="img/evento-04-s.webp 428w, img/evento-04.webp 901w" sizes="(max-width:900px) 50vw, 28vw" width="428" height="760" alt="Mesa de boda en verde y blanco con platos de plata y flores" loading="lazy" decoding="async" data-lb="img/evento-04.webp"></figure>
+      <figure class="rv"><img src="img/evento-02-s.webp" srcset="img/evento-02-s.webp 603w, img/evento-02.webp 844w" sizes="(max-width:900px) 50vw, 28vw" width="603" height="760" alt="Mesa larga de evento con claveles y rosas" loading="lazy" decoding="async" data-lb="img/evento-02.webp"></figure>
+      <figure class="rv"><img src="img/evento-05-s.webp" srcset="img/evento-05-s.webp 428w, img/evento-05.webp 901w" sizes="(max-width:900px) 50vw, 28vw" width="428" height="760" alt="Mesa de cumpleaños con bizcocho, velas y platos dorados" loading="lazy" decoding="async" data-lb="img/evento-05.webp"></figure>
+      <figure class="rv"><img src="img/evento-08-s.webp" srcset="img/evento-08-s.webp 428w, img/evento-08.webp 901w" sizes="(max-width:900px) 50vw, 28vw" width="428" height="760" alt="Mesa de cumpleaños bajo flores con servilletas bordadas con el logo de Amigos" loading="lazy" decoding="async" data-lb="img/evento-08.webp"></figure>
+      <figure class="rv"><img src="img/clientes-01-s.webp" srcset="img/clientes-01-s.webp 570w, img/clientes-01.webp 1200w" sizes="(max-width:900px) 50vw, 28vw" width="570" height="760" alt="Cumpleañera soplando la vela de su bizcocho con la familia" loading="lazy" decoding="async" data-lb="img/clientes-01.webp"></figure>
+      <figure class="rv"><img src="img/evento-07-s.webp" srcset="img/evento-07-s.webp 428w, img/evento-07.webp 901w" sizes="(max-width:900px) 50vw, 28vw" width="428" height="760" alt="Mesa sobre mármol con camino de follaje y rosas" loading="lazy" decoding="async" data-lb="img/evento-07.webp"></figure>
+      <figure class="rv"><img src="img/evento-01-s.webp" srcset="img/evento-01-s.webp 428w, img/evento-01.webp 901w" sizes="(max-width:900px) 50vw, 28vw" width="428" height="760" alt="Mesa decorada con gerberas, copas y cajitas de recuerdo" loading="lazy" decoding="async" data-lb="img/evento-01.webp"></figure>
+      <figure class="rv"><img src="img/clientes-09-s.webp" srcset="img/clientes-09-s.webp 570w, img/clientes-09.webp 1200w" sizes="(max-width:900px) 50vw, 28vw" width="570" height="760" alt="Graduación con bizcocho y globos morados y plateados" loading="lazy" decoding="async" data-lb="img/clientes-09.webp"></figure>
+      <figure class="rv"><img src="img/evento-03-s.webp" srcset="img/evento-03-s.webp 428w, img/evento-03.webp 901w" sizes="(max-width:900px) 50vw, 28vw" width="428" height="760" alt="Mesa azul y dorado junto al área de juegos infantil" loading="lazy" decoding="async" data-lb="img/evento-03.webp"></figure>
+      <figure class="rv"><img src="img/clientes-12-s.webp" srcset="img/clientes-12-s.webp 428w, img/clientes-12.webp 901w" sizes="(max-width:900px) 50vw, 28vw" width="428" height="760" alt="Familia celebrando unos 15 años con bizcocho azul" loading="lazy" decoding="async" data-lb="img/clientes-12.webp"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MOMENTOS ================= -->
+<section class="sec momentos" id="momentos">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="rv"><span class="eyebrow">Momentos en Amigos</span><h2>Aquí se viene a <em>celebrar</em>.</h2></div>
+      <p class="lead rv d1">Familias, amigos y cumpleañeros que hicieron de Amigos su lugar. Etiquétanos y sé parte de la historia.</p>
+    </div>
+    <div class="masonry">
+      <figure class="rv"><img src="img/familia-01-s.webp" srcset="img/familia-01-s.webp 428w, img/familia-01.webp 901w" sizes="(max-width:640px) 50vw, 25vw" width="428" height="760" alt="Familia reunida en una mesa larga bajo flores de cerezo" loading="lazy" decoding="async" data-lb="img/familia-01.webp"></figure>
+      <figure class="rv"><img src="img/clientes-05-s.webp" srcset="img/clientes-05-s.webp 570w, img/clientes-05.webp 1200w" sizes="(max-width:640px) 50vw, 25vw" width="570" height="760" alt="Familia junto a la Vespa roja con el logo de Amigos" loading="lazy" decoding="async" data-lb="img/clientes-05.webp"></figure>
+      <figure class="rv"><img src="img/clientes-03-s.webp" srcset="img/clientes-03-s.webp 570w, img/clientes-03.webp 1200w" sizes="(max-width:640px) 50vw, 25vw" width="570" height="760" alt="Amigas posando en la barra iluminada" loading="lazy" decoding="async" data-lb="img/clientes-03.webp"></figure>
+      <figure class="rv"><img src="img/clientes-07-s.webp" srcset="img/clientes-07-s.webp 570w, img/clientes-07.webp 1200w" sizes="(max-width:640px) 50vw, 25vw" width="570" height="760" alt="Familia en el columpio navideño con el logo de Amigos" loading="lazy" decoding="async" data-lb="img/clientes-07.webp"></figure>
+      <figure class="rv"><img src="img/clientes-04-s.webp" srcset="img/clientes-04-s.webp 570w, img/clientes-04.webp 1200w" sizes="(max-width:640px) 50vw, 25vw" width="570" height="760" alt="Padre e hija con sombreros en la Vespa roja" loading="lazy" decoding="async" data-lb="img/clientes-04.webp"></figure>
+      <figure class="rv"><img src="img/clientes-08-s.webp" srcset="img/clientes-08-s.webp 570w, img/clientes-08.webp 1200w" sizes="(max-width:640px) 50vw, 25vw" width="570" height="760" alt="Amigas bajo las flores iluminadas en morado" loading="lazy" decoding="async" data-lb="img/clientes-08.webp"></figure>
+      <figure class="rv"><img src="img/clientes-13-s.webp" srcset="img/clientes-13-s.webp 428w, img/clientes-13.webp 901w" sizes="(max-width:640px) 50vw, 25vw" width="428" height="760" alt="Familia en la Vespa bajo el letrero de neón" loading="lazy" decoding="async" data-lb="img/clientes-13.webp"></figure>
+      <figure class="rv"><img src="img/clientes-06-s.webp" srcset="img/clientes-06-s.webp 570w, img/clientes-06.webp 1200w" sizes="(max-width:640px) 50vw, 25vw" width="570" height="760" alt="Dos niñas vestidas de rojo frente al columpio de flores" loading="lazy" decoding="async" data-lb="img/clientes-06.webp"></figure>
+      <figure class="rv"><img src="img/clientes-10-s.webp" srcset="img/clientes-10-s.webp 570w, img/clientes-10.webp 1200w" sizes="(max-width:640px) 50vw, 25vw" width="570" height="760" alt="Niño con sombrero en la Vespa roja" loading="lazy" decoding="async" data-lb="img/clientes-10.webp"></figure>
+      <figure class="rv"><img src="img/clientes-14-s.webp" srcset="img/clientes-14-s.webp 428w, img/clientes-14.webp 901w" sizes="(max-width:640px) 50vw, 25vw" width="428" height="760" alt="Graduada y amiga mostrando sus anillos" loading="lazy" decoding="async" data-lb="img/clientes-14.webp"></figure>
+    </div>
+    <div class="ig-cta rv">
+      <p>Síguenos en Instagram · <b>@amigosfoodfactory</b></p>
+      <a class="btn btn-oscuro" href="https://www.instagram.com/amigosfoodfactory/" target="_blank" rel="noopener">Ver en Instagram</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRENSA ================= -->
+<section class="sec prensa dark" id="prensa">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="rv"><span class="eyebrow">En los medios</span><h2>Lo que dicen <em>de nosotros</em>.</h2></div>
+    </div>
+    <div class="pr-grid rv">
+      <a class="pr" href="https://elnacional.com.do/restaurante-dominicano-logra-hazana/" target="_blank" rel="noopener"><span class="medio">El Nacional</span><h4>El restaurante dominicano que hizo historia con el mofongo más grande del mundo</h4><span class="leer">Leer nota →</span></a>
+      <a class="pr" href="https://elnuevodiario.com.do/amigos-seafood-steak-house-primer-restaurante-dominicano-en-alcanzar-un-record-guinness/" target="_blank" rel="noopener"><span class="medio">El Nuevo Diario</span><h4>Primer restaurante dominicano en alcanzar un Récord Guinness</h4><span class="leer">Leer nota →</span></a>
+      <a class="pr" href="https://www.diariolibre.com/revista/sociales/2024/10/25/amigos-seafood-steakhouse-celebra-premio-restaurante-del-ano/2891977" target="_blank" rel="noopener"><span class="medio">Diario Libre</span><h4>Amigos Seafood Steakhouse celebra el premio “Restaurante del Año”</h4><span class="leer">Leer nota →</span></a>
+      <a class="pr" href="https://www.elcaribe.com.do/gente/viajes-y-destinos/amigos-sea-food-steak-house-restaurante-del-ano-2024/" target="_blank" rel="noopener"><span class="medio">El Caribe</span><h4>Amigos Sea Food Steak House, restaurante del año 2024 en RD</h4><span class="leer">Leer nota →</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VISITA ================= -->
+<section class="sec visita" id="visita">
+  <div class="wrap vi-grid">
+    <div class="rv">
+      <span class="eyebrow" style="color:var(--ambar)">Visítanos</span>
+      <h2>Te esperamos <em style="color:var(--ambar-suave)">en casa</em>.</h2>
+      <dl class="datos">
+        <div class="dato"><dt>Dirección</dt><dd>Av. Salvador Estrella Sadhalá esq. Av. República de Argentina, Santiago de los Caballeros</dd></div>
+        <div class="dato"><dt>Horario</dt><dd>Lunes a domingo<br>12:00 p. m. – 12:00 a. m.</dd></div>
+        <div class="dato"><dt>Teléfono</dt><dd><a href="tel:+18092260026">+1 809-226-0026</a></dd></div>
+        <div class="dato"><dt>Correo</dt><dd><a href="mailto:amigosfoodfactory@gmail.com">amigosfoodfactory@gmail.com</a></dd></div>
+      </dl>
+      <div class="vi-cta">
+        <a class="btn btn-rojo" href="https://wa.me/18092260026?text=%C2%A1Hola%2C%20Amigos%21%20Me%20gustar%C3%ADa%20reservar%20una%20mesa." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.7-.3-1.5-.7-2.3-1.5-.6-.6-1-1.2-1.2-1.4-.1-.2 0-.4.1-.5l.4-.4.3-.4v-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 1.9 2.9 4.6 4 .6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.4-.3z"/></svg>Reservar por WhatsApp</a>
+        <a class="btn btn-linea" href="https://maps.app.goo.gl/FbSvntwTxCqjDAqq8" target="_blank" rel="noopener">Cómo llegar</a>
+      </div>
+    </div>
+    <div class="mapa rv d1">
+      <iframe title="Mapa de Amigos Seafood & Steak House en Santiago" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Amigos+Seafood+Steakhouse,+Av.+Salvador+Estrella+Sadhal%C3%A1,+Santiago+de+los+Caballeros&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ftr">
+  <div class="wrap">
+    <a href="#inicio" class="logo" aria-label="Volver al inicio"><svg class="flame" viewBox="0 0 22 30" fill="currentColor" aria-hidden="true"><path d="M11 1c1.4 4.3 6.5 7.3 6.5 14.2A6.9 6.9 0 0 1 11 22.4a6.9 6.9 0 0 1-6.6-7.2c0-3.2 1.7-5.3 3-7 0 2.4 1 4 2.4 4.8C9.2 9.3 9.7 4.8 11 1z"/><path d="M11 24.2c-2.6 0-4.3-1.6-4.3-3.8 0-1.6.9-2.6 1.7-3.4.1 1.3.8 2.1 1.6 2.4-.3-1.6.2-3.4 1.4-4.9.6 2.3 3.9 3.3 3.9 6 0 2.1-1.8 3.7-4.3 3.7z" opacity=".55"/><rect x="2" y="27.2" width="18" height="1.3" rx=".6" opacity=".6"/></svg><span class="word"><span class="name">Amigos</span><span class="tag">SEAFOOD · STEAK HOUSE</span></span></a>
+    <div class="socials">
+      <a href="https://www.instagram.com/amigosfoodfactory/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+      <a href="https://www.tiktok.com/@amigosseafoodsteakhouse" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 3c.4 2.1 1.8 3.6 4 3.8v3.1c-1.5 0-2.9-.4-4-1.2v6.2A6 6 0 1 1 10.5 9v3.2a2.9 2.9 0 1 0 2.1 2.8V3h4z"/></svg></a>
+      <a href="https://wa.me/18092260026?text=%C2%A1Hola%2C%20Amigos%21%20Me%20gustar%C3%ADa%20reservar%20una%20mesa." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.7-.3-1.5-.7-2.3-1.5-.6-.6-1-1.2-1.2-1.4-.1-.2 0-.4.1-.5l.4-.4.3-.4v-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 1.9 2.9 4.6 4 .6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.4-.3z"/></svg></a>
+    </div>
+    <div class="ftr-bottom">
+      <span>© <span id="yr">2026</span> Amigos Seafood &amp; Steak House · Santiago de los Caballeros, RD</span>
+      <span>Primer restaurante dominicano con Récord Guinness</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" id="waf" href="https://wa.me/18092260026?text=%C2%A1Hola%2C%20Amigos%21%20Me%20gustar%C3%ADa%20reservar%20una%20mesa." target="_blank" rel="noopener" aria-label="Reservar por WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.7-.3-1.5-.7-2.3-1.5-.6-.6-1-1.2-1.2-1.4-.1-.2 0-.4.1-.5l.4-.4.3-.4v-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 1.9 2.9 4.6 4 .6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.4-.3z"/></svg><span>Reservar</span></a>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Galería de fotos">
+  <button class="x" aria-label="Cerrar">×</button>
+  <button class="prev" aria-label="Foto anterior">‹</button>
+  <img alt="">
+  <button class="next" aria-label="Foto siguiente">›</button>
+  <div class="cnt"></div>
+</div>
+
+<script>
+(function(){
+  var hdr=document.getElementById('hdr'), waf=document.getElementById('waf');
+  function onScroll(){
+    var y=window.scrollY;
+    hdr.classList.toggle('solid', y>60);
+    var nearEnd = (window.innerHeight + y) > (document.body.scrollHeight - 260);
+    waf.classList.toggle('hide', y<window.innerHeight*0.6 || nearEnd);
+  }
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  var burger=document.getElementById('burger'), nav=document.getElementById('nav');
+  function setMenu(open){document.body.classList.toggle('menu-open',open);burger.setAttribute('aria-expanded',open);burger.setAttribute('aria-label',open?'Cerrar menú':'Abrir menú');document.body.style.overflow=open?'hidden':'';}
+  burger.addEventListener('click',function(){setMenu(!document.body.classList.contains('menu-open'))});
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
+
+  var rv=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});
+    rv.forEach(function(el){io.observe(el)});
+  } else { rv.forEach(function(el){el.classList.add('in')}); }
+
+  var imgs=[].slice.call(document.querySelectorAll('img[data-lb]'));
+  var lb=document.getElementById('lb'), li=lb.querySelector('img'), cnt=lb.querySelector('.cnt'), idx=0;
+  function show(i){idx=(i+imgs.length)%imgs.length;var im=imgs[idx];li.src=im.getAttribute('data-lb');li.alt=im.alt;cnt.textContent=(idx+1)+' / '+imgs.length;}
+  function open(i){show(i);lb.classList.add('on');document.body.style.overflow='hidden';}
+  function close(){lb.classList.remove('on');document.body.style.overflow='';}
+  imgs.forEach(function(im,i){im.addEventListener('click',function(){open(i)})});
+  lb.querySelector('.x').addEventListener('click',close);
+  lb.querySelector('.prev').addEventListener('click',function(e){e.stopPropagation();show(idx-1)});
+  lb.querySelector('.next').addEventListener('click',function(e){e.stopPropagation();show(idx+1)});
+  lb.addEventListener('click',function(e){if(e.target===lb)close()});
+  document.addEventListener('keydown',function(e){if(!lb.classList.contains('on'))return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')show(idx-1);if(e.key==='ArrowRight')show(idx+1);});
+  var sx=0;lb.addEventListener('touchstart',function(e){sx=e.touches[0].clientX},{passive:true});
+  lb.addEventListener('touchend',function(e){var dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>50)show(idx+(dx<0?1:-1));});
+
+  var tabs=[].slice.call(document.querySelectorAll('.mf-tab'));
+  function selTab(t,focus){tabs.forEach(function(x){var on=x===t;x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;document.getElementById(x.getAttribute('aria-controls')).classList.toggle('on',on);});if(focus)t.focus();t.scrollIntoView({block:'nearest',inline:'center',behavior:'smooth'});}
+  tabs.forEach(function(t,i){t.addEventListener('click',function(){selTab(t)});t.addEventListener('keydown',function(e){if(e.key==='ArrowRight')selTab(tabs[(i+1)%tabs.length],true);if(e.key==='ArrowLeft')selTab(tabs[(i-1+tabs.length)%tabs.length],true);});});
+
+  document.getElementById('yr').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
