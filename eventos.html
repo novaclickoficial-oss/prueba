@@ -374,15 +374,21 @@ h2 em,h1 em{font-style:italic;color:var(--rojo)}
 .rating b{font-family:var(--serif);font-size:48px;font-weight:500;line-height:1}
 .rating .st{color:var(--rojo);letter-spacing:3px;font-size:16px}
 .rating small{display:block;font-size:12px;color:var(--gris);letter-spacing:.06em}
-.rs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,2vw,24px)}
-.rs{background:var(--hueso);border:1px solid var(--linea);padding:28px 26px;display:flex;flex-direction:column;gap:16px}
-.rs blockquote{font-family:var(--serif);font-size:23px;line-height:1.3;flex:1}
+.ratings{display:flex;gap:12px;flex-wrap:wrap}
+.rs-grid{columns:3;column-gap:clamp(14px,2vw,22px)}
+.rs{background:var(--hueso);border:1px solid var(--linea);padding:26px 24px;display:flex;flex-direction:column;gap:14px;break-inside:avoid;margin-bottom:clamp(14px,2vw,22px)}
+.rs .src{display:block;margin-top:2px;font-size:12px;letter-spacing:.04em}
+.rs .src a{text-decoration:underline;text-underline-offset:3px}
+.rs .src .st{color:var(--rojo);letter-spacing:2px}
+.rs-note{margin-top:18px;font-size:12.5px;color:var(--gris)}
+.rs blockquote{font-family:var(--serif);font-size:22px;line-height:1.3}
 .rs blockquote::before{content:"“";display:block;font-size:54px;line-height:.6;color:var(--rojo);margin-bottom:10px}
 .rs .who{font-size:13px;color:var(--gris)}
 .rs .who b{color:var(--tinta);font-weight:700}
 .rs .tr{font-size:13px;color:var(--gris);font-style:italic;line-height:1.5}
 .rs-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:clamp(28px,4vw,44px)}
-@media (max-width:900px){.rs-grid{grid-template-columns:1fr}}
+@media (max-width:1000px){.rs-grid{columns:2}}
+@media (max-width:640px){.rs-grid{columns:auto;display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin:0 calc(var(--gutter)*-1);padding:0 var(--gutter) 10px;scroll-padding-inline:var(--gutter)}.rs{flex:0 0 84%;scroll-snap-align:start;margin-bottom:0}}
 /* reservar */
 .reservar{background:var(--noche);color:var(--hueso)}
 .rv-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(40px,6vw,88px);align-items:start}
@@ -440,9 +446,10 @@ h2.bar-logo{letter-spacing:0}
 .mf-item h3{font-family:var(--serif);font-size:22px;font-weight:600;line-height:1.2}
 .skip{position:absolute;left:-999px;top:8px;z-index:100;background:var(--hueso);color:var(--tinta);padding:10px 14px}
 .skip:focus{left:8px}
+@media (max-width:640px){.ratings{width:100%}.rating{flex:1 1 0;padding:14px;gap:10px}.rating b{font-size:36px}.rating small{font-size:11px}}
 
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://amigos-web.vercel.app/"},{"@type":"ListItem","position":2,"name":"Eventos","item":"https://amigos-web.vercel.app/eventos"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Puedo celebrar un cumpleaños o un evento en Amigos?","acceptedAnswer":{"@type":"Answer","text":"Sí. Tenemos salones privados y montamos la mesa con tus colores, flores y decoración para cumpleaños, 15 años, graduaciones, aniversarios, bodas y reuniones de empresa. Cotiza tu evento aquí."}},{"@type":"Question","name":"¿Tienen área de juegos para niños?","acceptedAnswer":{"@type":"Answer","text":"Sí. Tenemos un área de juegos infantil para niños de hasta 12 años, que deben estar supervisados por un adulto."}},{"@type":"Question","name":"¿Cómo cotizo un evento?","acceptedAnswer":{"@type":"Answer","text":"Completa el formulario de esta página con la fecha, la cantidad de invitados y el tipo de celebración. Se abre WhatsApp con el mensaje listo y te respondemos con opciones de salón, menú y decoración."}},{"@type":"Question","name":"¿Cuál es el horario del restaurante?","acceptedAnswer":{"@type":"Answer","text":"Abrimos todos los días, de lunes a domingo, de 12:00 del mediodía a 12:00 de la medianoche."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://amigos-web.vercel.app/"},{"@type":"ListItem","position":2,"name":"Eventos","item":"https://amigos-web.vercel.app/eventos"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Puedo celebrar un cumpleaños o un evento en Amigos?","acceptedAnswer":{"@type":"Answer","text":"Sí. Tenemos salones privados y montamos la mesa con tus colores, flores y decoración para cumpleaños, 15 años, graduaciones, aniversarios, bodas y reuniones de empresa. Cotiza tu evento aquí."}},{"@type":"Question","name":"¿Tienen área de juegos para niños?","acceptedAnswer":{"@type":"Answer","text":"Sí. Tenemos un área de juegos infantil para niños de hasta 12 años, que deben estar supervisados por un adulto."}},{"@type":"Question","name":"¿Tienen parqueo?","acceptedAnswer":{"@type":"Answer","text":"Sí, tenemos un amplio parqueo para nuestros clientes."}},{"@type":"Question","name":"¿Cómo cotizo un evento?","acceptedAnswer":{"@type":"Answer","text":"Completa el formulario de esta página con la fecha, la cantidad de invitados y el tipo de celebración. Se abre WhatsApp con el mensaje listo y te respondemos con opciones de salón, menú y decoración."}},{"@type":"Question","name":"¿Cuál es el horario del restaurante?","acceptedAnswer":{"@type":"Answer","text":"Abrimos todos los días, de lunes a domingo, de 12:00 del mediodía a 12:00 de la medianoche."}}]}</script>
 <style>@media (max-width:900px){#montajes .masonry{grid-template-columns:repeat(2,1fr)!important}}</style></head>
 <body>
 <a class="skip" href="#main">Saltar al contenido</a><header class="hdr" id="hdr"><div class="wrap">
@@ -491,7 +498,7 @@ h2.bar-logo{letter-spacing:0}
   </div>
 </section><section class="sec" id="faq-eventos"><div class="wrap faq-wrap">
 <div class="rv"><span class="eyebrow">Preguntas frecuentes</span><h2 style="margin-top:16px">Preguntas sobre <em>eventos</em>.</h2><p class="lead" style="margin-top:18px">Lo que más nos preguntan antes de celebrar con nosotros.</p></div>
-<div class="faq-list"><details class="rv"><summary>¿Puedo celebrar un cumpleaños o un evento en Amigos?</summary><div class="ans">Sí. Tenemos salones privados y montamos la mesa con tus colores, flores y decoración para cumpleaños, 15 años, graduaciones, aniversarios, bodas y reuniones de empresa. <a href="/eventos">Cotiza tu evento aquí</a>.</div></details><details class="rv"><summary>¿Tienen área de juegos para niños?</summary><div class="ans">Sí. Tenemos un área de juegos infantil para niños de hasta 12 años, que deben estar supervisados por un adulto.</div></details><details class="rv"><summary>¿Cómo cotizo un evento?</summary><div class="ans">Completa el formulario de esta página con la fecha, la cantidad de invitados y el tipo de celebración. Se abre WhatsApp con el mensaje listo y te respondemos con opciones de salón, menú y decoración.</div></details><details class="rv"><summary>¿Cuál es el horario del restaurante?</summary><div class="ans">Abrimos todos los días, de lunes a domingo, de 12:00 del mediodía a 12:00 de la medianoche.</div></details></div>
+<div class="faq-list"><details class="rv"><summary>¿Puedo celebrar un cumpleaños o un evento en Amigos?</summary><div class="ans">Sí. Tenemos salones privados y montamos la mesa con tus colores, flores y decoración para cumpleaños, 15 años, graduaciones, aniversarios, bodas y reuniones de empresa. <a href="/eventos">Cotiza tu evento aquí</a>.</div></details><details class="rv"><summary>¿Tienen área de juegos para niños?</summary><div class="ans">Sí. Tenemos un área de juegos infantil para niños de hasta 12 años, que deben estar supervisados por un adulto.</div></details><details class="rv"><summary>¿Tienen parqueo?</summary><div class="ans">Sí, tenemos un amplio parqueo para nuestros clientes.</div></details><details class="rv"><summary>¿Cómo cotizo un evento?</summary><div class="ans">Completa el formulario de esta página con la fecha, la cantidad de invitados y el tipo de celebración. Se abre WhatsApp con el mensaje listo y te respondemos con opciones de salón, menú y decoración.</div></details><details class="rv"><summary>¿Cuál es el horario del restaurante?</summary><div class="ans">Abrimos todos los días, de lunes a domingo, de 12:00 del mediodía a 12:00 de la medianoche.</div></details></div>
 </div></section>
 </main>
 <footer class="ftr">
