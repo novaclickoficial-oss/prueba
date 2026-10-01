@@ -462,8 +462,36 @@ h1,h2,h3,.lead,.ocasiones li,.faq-list summary{overflow-wrap:break-word}
 @media (max-width:400px){.ocasiones li span{align-self:flex-start}}
 @media (max-width:520px){.vi-cta .btn,.ig-cta .btn,.rs-links .btn{flex:1 1 100%}.hero .eyebrow::before{display:none}}
 /* portada recortada sin edificios */
-.hero-img img{object-position:55% 0%}
-@media (max-width:640px){.hero-img img{object-position:68% 35%}}
+/* --- portada con varias fotos --- */
+.hero-img .sl{position:absolute;inset:0;margin:0;opacity:0;transition:opacity 1.6s ease}
+.hero-img .sl.on{opacity:1}
+.hero-img .sl picture,.hero-img .sl img{display:block;width:100%;height:100%}
+.hero-img .sl img{object-fit:cover;object-position:50% 50%;animation:none;transform:scale(1.07);transition:transform 7.5s ease-out}
+.hero-img .sl.on img{transform:scale(1)}
+.hero-img .sl:first-child img{object-position:62% 0%}
+.hero::after{background:linear-gradient(90deg,rgba(12,10,12,.86) 0%,rgba(12,10,12,.62) 34%,rgba(12,10,12,.18) 62%,rgba(12,10,12,.05) 100%),linear-gradient(180deg,rgba(12,10,12,.55) 0%,rgba(12,10,12,0) 22%,rgba(12,10,12,0) 60%,rgba(12,10,12,.9) 100%)}
+.hero-nav{position:absolute;z-index:3;right:var(--gutter);bottom:clamp(26px,5vh,48px);display:flex;align-items:center;gap:14px}
+.hcap{font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(250,246,239,.85);text-shadow:0 1px 8px rgba(0,0,0,.6)}
+.hdots{display:flex;gap:6px}
+.hd{width:26px;height:22px;position:relative;cursor:pointer}
+.hd::before{content:"";position:absolute;left:0;right:0;top:10px;height:2px;background:rgba(250,246,239,.35);border-radius:2px;transition:background .3s}
+.hd.on::before{background:var(--ambar-suave)}
+.hd:focus-visible{outline:2px solid var(--ambar);outline-offset:2px}
+@media (max-width:640px){
+.hero::after{background:linear-gradient(180deg,rgba(12,10,12,.5) 0%,rgba(12,10,12,.15) 16%,rgba(12,10,12,.55) 34%,rgba(12,10,12,.82) 55%,rgba(12,10,12,.97) 100%)}
+.hero-img .sl img,.hero-img .sl:first-child img{object-position:50% 0%}
+.hero-nav{left:0;right:0;justify-content:center;top:84px;bottom:auto}
+.hcap{display:none}
+.hero-in{padding-top:150px}
+}
+@media (prefers-reduced-motion:reduce){.hero-img .sl img{transform:none;transition:none}.hero-img .sl{transition:none}}
+@media (max-width:640px){
+.hero .hero-badges{display:none}
+.hero h1{font-size:clamp(36px,10.5vw,44px);margin:14px 0 14px}
+.hero p{font-size:16px}
+.hero-cta{margin-top:24px}
+.hero-in{padding-bottom:36px}
+}
 
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://amigosseafoodsteakhouse.com/"},{"@type":"ListItem","position":2,"name":"Récord Guinness","item":"https://amigosseafoodsteakhouse.com/record-guinness"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Amigos Seafood & Steak House y el mofongo más grande del mundo (Récord Guinness)","image":["https://amigosseafoodsteakhouse.com/img/guinness-02.webp"],"inLanguage":"es-DO","author":{"@id":"https://amigosseafoodsteakhouse.com/#restaurante"},"publisher":{"@id":"https://amigosseafoodsteakhouse.com/#restaurante"},"about":{"@id":"https://amigosseafoodsteakhouse.com/#restaurante"},"mainEntityOfPage":"https://amigosseafoodsteakhouse.com/record-guinness","datePublished":"2025-07-30"}</script>
@@ -567,6 +595,23 @@ h1,h2,h3,.lead,.ocasiones li,.faq-list summary{overflow-wrap:break-word}
   function selTab(t,focus){tabs.forEach(function(x){var on=x===t;x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;document.getElementById(x.getAttribute('aria-controls')).classList.toggle('on',on);});if(focus)t.focus();t.scrollIntoView({block:'nearest',inline:'center',behavior:'smooth'});}
   tabs.forEach(function(t,i){t.addEventListener('click',function(){selTab(t)});t.addEventListener('keydown',function(e){if(e.key==='ArrowRight')selTab(tabs[(i+1)%tabs.length],true);if(e.key==='ArrowLeft')selTab(tabs[(i-1+tabs.length)%tabs.length],true);});});
 
+
+  // ---- Portada con varias fotos
+  (function(){
+    var sl=[].slice.call(document.querySelectorAll('.hero-img .sl')); if(sl.length<2)return;
+    var dots=[].slice.call(document.querySelectorAll('.hd')), cap=document.querySelector('.hcap'), i=0, t=null;
+    var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function go(n){sl[i].classList.remove('on');sl[i].setAttribute('aria-hidden','true');if(dots[i])dots[i].classList.remove('on');
+      i=(n+sl.length)%sl.length;sl[i].classList.add('on');sl[i].removeAttribute('aria-hidden');if(dots[i])dots[i].classList.add('on');if(cap)cap.textContent=sl[i].dataset.cap;}
+    function play(){stop();if(!rm)t=setInterval(function(){go(i+1)},5500);}
+    function stop(){if(t){clearInterval(t);t=null;}}
+    dots.forEach(function(d){d.addEventListener('click',function(){go(+d.dataset.i);play();});});
+    document.addEventListener('visibilitychange',function(){document.hidden?stop():play();});
+    var hero=document.querySelector('.hero'),sx=null;
+    hero.addEventListener('touchstart',function(e){sx=e.touches[0].clientX},{passive:true});
+    hero.addEventListener('touchend',function(e){if(sx===null)return;var dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>60){go(i+(dx<0?1:-1));play();}sx=null;});
+    play();
+  })();
 
   // ---- Mapa bajo demanda
   document.querySelectorAll('[data-map]').forEach(function(b){b.addEventListener('click',function(){var box=b.closest('.mapa');box.innerHTML='<iframe title="Mapa de Amigos Seafood & Steak House" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=19.4527697,-70.68533&z=17&output=embed"></iframe>';});});

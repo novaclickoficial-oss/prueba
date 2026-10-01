@@ -18,7 +18,7 @@
 <link rel="icon" type="image/png" href="img/logo-64.png"><link rel="apple-touch-icon" href="img/logo-160.png">
 <link rel="preload" as="font" type="font/woff2" href="fonts/cormorant-garamond-latin-500-normal.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="fonts/manrope-latin-400-normal.woff2" crossorigin>
-<link rel="preload" as="image" href="img/fachada-02-s.webp" imagesrcset="img/fachada-02-s.webp 760w, img/fachada-02.webp 1280w" imagesizes="100vw" fetchpriority="high">
+<link rel="preload" as="image" href="img/fachada-02-p.webp" media="(max-width:640px)" fetchpriority="high"><link rel="preload" as="image" href="img/fachada-02.webp" imagesrcset="img/fachada-02-s.webp 760w, img/fachada-02.webp 1280w" imagesizes="100vw" media="(min-width:641px)" fetchpriority="high">
 <style>
 :root{
 --noche:#121014; --carbon:#1B171B; --carbon-2:#26202A;
@@ -462,8 +462,36 @@ h1,h2,h3,.lead,.ocasiones li,.faq-list summary{overflow-wrap:break-word}
 @media (max-width:400px){.ocasiones li span{align-self:flex-start}}
 @media (max-width:520px){.vi-cta .btn,.ig-cta .btn,.rs-links .btn{flex:1 1 100%}.hero .eyebrow::before{display:none}}
 /* portada recortada sin edificios */
-.hero-img img{object-position:55% 0%}
-@media (max-width:640px){.hero-img img{object-position:68% 35%}}
+/* --- portada con varias fotos --- */
+.hero-img .sl{position:absolute;inset:0;margin:0;opacity:0;transition:opacity 1.6s ease}
+.hero-img .sl.on{opacity:1}
+.hero-img .sl picture,.hero-img .sl img{display:block;width:100%;height:100%}
+.hero-img .sl img{object-fit:cover;object-position:50% 50%;animation:none;transform:scale(1.07);transition:transform 7.5s ease-out}
+.hero-img .sl.on img{transform:scale(1)}
+.hero-img .sl:first-child img{object-position:62% 0%}
+.hero::after{background:linear-gradient(90deg,rgba(12,10,12,.86) 0%,rgba(12,10,12,.62) 34%,rgba(12,10,12,.18) 62%,rgba(12,10,12,.05) 100%),linear-gradient(180deg,rgba(12,10,12,.55) 0%,rgba(12,10,12,0) 22%,rgba(12,10,12,0) 60%,rgba(12,10,12,.9) 100%)}
+.hero-nav{position:absolute;z-index:3;right:var(--gutter);bottom:clamp(26px,5vh,48px);display:flex;align-items:center;gap:14px}
+.hcap{font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(250,246,239,.85);text-shadow:0 1px 8px rgba(0,0,0,.6)}
+.hdots{display:flex;gap:6px}
+.hd{width:26px;height:22px;position:relative;cursor:pointer}
+.hd::before{content:"";position:absolute;left:0;right:0;top:10px;height:2px;background:rgba(250,246,239,.35);border-radius:2px;transition:background .3s}
+.hd.on::before{background:var(--ambar-suave)}
+.hd:focus-visible{outline:2px solid var(--ambar);outline-offset:2px}
+@media (max-width:640px){
+.hero::after{background:linear-gradient(180deg,rgba(12,10,12,.5) 0%,rgba(12,10,12,.15) 16%,rgba(12,10,12,.55) 34%,rgba(12,10,12,.82) 55%,rgba(12,10,12,.97) 100%)}
+.hero-img .sl img,.hero-img .sl:first-child img{object-position:50% 0%}
+.hero-nav{left:0;right:0;justify-content:center;top:84px;bottom:auto}
+.hcap{display:none}
+.hero-in{padding-top:150px}
+}
+@media (prefers-reduced-motion:reduce){.hero-img .sl img{transform:none;transition:none}.hero-img .sl{transition:none}}
+@media (max-width:640px){
+.hero .hero-badges{display:none}
+.hero h1{font-size:clamp(36px,10.5vw,44px);margin:14px 0 14px}
+.hero p{font-size:16px}
+.hero-cta{margin-top:24px}
+.hero-in{padding-bottom:36px}
+}
 
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","@id":"https://amigosseafoodsteakhouse.com/#restaurante","name":"Amigos Seafood & Steak House","alternateName":["Amigos Seafood Steakhouse","Amigos Food Factory","Amigos Steakhouse"],"description":"Seafood and steakhouse restaurant in Santiago de los Caballeros, Dominican Republic: fresh seafood, Angus steaks and Dominican cuisine. First Dominican restaurant with a Guinness World Record.","url":"https://amigosseafoodsteakhouse.com/","logo":"https://amigosseafoodsteakhouse.com/img/logo-512.webp","image":["https://amigosseafoodsteakhouse.com/img/fachada-01.webp","https://amigosseafoodsteakhouse.com/img/monumento-01.webp","https://amigosseafoodsteakhouse.com/img/salon-01.webp","https://amigosseafoodsteakhouse.com/img/plato-06.webp"],"telephone":"+1-809-226-0026","email":"amigosfoodfactory@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Av. Salvador Estrella Sadhalá esq. Av. República de Argentina","addressLocality":"Santiago de los Caballeros","addressRegion":"Santiago","postalCode":"51000","addressCountry":"DO"},"geo":{"@type":"GeoCoordinates","latitude":19.4527697,"longitude":-70.68533},"hasMap":"https://maps.app.goo.gl/FbSvntwTxCqjDAqq8","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"12:00","closes":"23:59"}],"servesCuisine":["Mariscos","Steakhouse","Dominicana","Internacional"],"priceRange":"RD$495 – RD$6,995","currenciesAccepted":"DOP","acceptsReservations":true,"hasMenu":"https://amigosseafoodsteakhouse.com/carta","menu":"https://amigosseafoodsteakhouse.com/carta","areaServed":{"@type":"City","name":"Santiago de los Caballeros"},"award":["Guinness World Records 2025: el mofongo más grande del mundo (556 kg)","Restaurante del Año 2024, Federación Dominicana de Comerciantes"],"amenityFeature":[{"@type":"LocationFeatureSpecification","name":"Área de juegos infantil","value":true},{"@type":"LocationFeatureSpecification","name":"Salones privados para eventos","value":true},{"@type":"LocationFeatureSpecification","name":"Bar & lounge","value":true},{"@type":"LocationFeatureSpecification","name":"Parqueo amplio","value":true},{"@type":"LocationFeatureSpecification","name":"Área para mascotas","value":true}],"paymentAccepted":"Efectivo, tarjetas de crédito y débito, transferencias","sameAs":["https://www.instagram.com/amigosfoodfactory/","https://www.tiktok.com/@amigosseafoodsteakhouse","https://www.tripadvisor.com/Restaurant_Review-g635962-d28003769-Reviews-Amigos_Seafood_Steakhouse-Santiago_de_los_Caballeros_Santiago_Province_Dominican.html"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Where is Amigos Seafood & Steak House?","acceptedAnswer":{"@type":"Answer","text":"We are on Salvador Estrella Sadhalá Avenue at the corner of República de Argentina Avenue, in Santiago de los Caballeros, Dominican Republic. Open in Google Maps."}},{"@type":"Question","name":"What are your opening hours?","acceptedAnswer":{"@type":"Answer","text":"We are open every day, Monday to Sunday, from 12:00 noon to 12:00 midnight."}},{"@type":"Question","name":"How do I make a reservation?","acceptedAnswer":{"@type":"Answer","text":"Message us on WhatsApp at +1 809-226-0026, or use the reservation form on this page, which writes the message for you with the date, time and party size."}},{"@type":"Question","name":"What kind of food do you serve?","acceptedAnswer":{"@type":"Answer","text":"Fresh seafood (lobster, red snapper, shrimp, octopus, salmon), grilled Angus steaks (churrasco, ribeye, tomahawk, picanha), Dominican classics like mofongo, goat stew and oxtail, plus pastas, salads, burgers and desserts. See the full menu (in Spanish)."}},{"@type":"Question","name":"How much does it cost to eat at Amigos?","acceptedAnswer":{"@type":"Answer","text":"Starters from RD$ 495, main courses between RD$ 795 and RD$ 3,495, and desserts from RD$ 395. The 56 oz Angus Tomahawk, for sharing, is RD$ 6,995. Prices do not include taxes."}},{"@type":"Question","name":"Is there parking?","acceptedAnswer":{"@type":"Answer","text":"Yes, we have ample parking for our guests."}},{"@type":"Question","name":"Can I bring my pet?","acceptedAnswer":{"@type":"Answer","text":"Yes. We have a dedicated pet area, so you can come with your dog."}},{"@type":"Question","name":"Do you deliver?","acceptedAnswer":{"@type":"Answer","text":"We don't offer delivery. Come visit us for the full Amigos experience."}},{"@type":"Question","name":"What payment methods do you accept?","acceptedAnswer":{"@type":"Answer","text":"We accept all payment methods: cash, credit and debit cards, and bank transfers."}},{"@type":"Question","name":"Do you have a play area for kids?","acceptedAnswer":{"@type":"Answer","text":"Yes. We have a kids' play area for children up to 12 years old, who must be supervised by an adult."}},{"@type":"Question","name":"Can I host a birthday or private event?","acceptedAnswer":{"@type":"Answer","text":"Yes. We have private rooms and we set the table with your colors, flowers and decorations for birthdays, quinceañeras, graduations, anniversaries, weddings and corporate dinners. Request a quote."}},{"@type":"Question","name":"Is it true Amigos holds a Guinness World Record?","acceptedAnswer":{"@type":"Answer","text":"Yes. In July 2025, in Santiago's Central Park, we prepared the world's largest mofongo, weighing 556 kg (1,226.8 lb), certified by Guinness World Records. We are the first Dominican restaurant to hold a Guinness World Record."}}]}</script>
@@ -476,7 +504,7 @@ h1,h2,h3,.lead,.ocasiones li,.faq-list summary{overflow-wrap:break-word}
 </div></header>
 <main id="main">
 <section class="hero" id="inicio">
-  <div class="hero-img"><img src="img/fachada-02.webp" srcset="img/fachada-02-s.webp 760w, img/fachada-02.webp 1280w" sizes="100vw" width="1280" height="730" alt="Illuminated facade of Amigos Seafood &amp; Steak House in Santiago" fetchpriority="high" decoding="async"></div>
+  <div class="hero-img"><figure class="sl on" data-cap="Our home"><picture><source media="(max-width:640px)" srcset="img/fachada-02-p.webp"><img src="img/fachada-02.webp" srcset="img/fachada-02-s.webp 760w, img/fachada-02.webp 1280w" sizes="100vw" width="1280" height="730" alt="Illuminated facade of Amigos Seafood &amp; Steak House in Santiago" fetchpriority="high" decoding="async"></picture></figure><figure class="sl" data-cap="Cherry blossom room" aria-hidden="true"><picture><source media="(max-width:640px)" srcset="img/salon-01-p.webp"><img src="img/salon-01.webp" srcset="img/salon-01-s.webp 760w, img/salon-01.webp 1600w" sizes="100vw" width="1600" height="1066" alt="Cherry blossom dining room" fetchpriority="low" loading="lazy" decoding="async"></picture></figure><figure class="sl" data-cap="Amigas Bar &amp; Lounge" aria-hidden="true"><picture><source media="(max-width:640px)" srcset="img/bar-01-p.webp"><img src="img/bar-01.webp" srcset="img/bar-01-s.webp 760w, img/bar-01.webp 1600w" sizes="100vw" width="1600" height="1066" alt="Illuminated bar at Amigas Bar &amp; Lounge" fetchpriority="low" loading="lazy" decoding="async"></picture></figure><figure class="sl" data-cap="The lounge" aria-hidden="true"><picture><source media="(max-width:640px)" srcset="img/lounge-01-p.webp"><img src="img/lounge-01.webp" srcset="img/lounge-01-s.webp 760w, img/lounge-01.webp 1600w" sizes="100vw" width="1600" height="1066" alt="Lounge by the windows" fetchpriority="low" loading="lazy" decoding="async"></picture></figure><figure class="sl" data-cap="Main dining room" aria-hidden="true"><picture><source media="(max-width:640px)" srcset="img/salon-02-p.webp"><img src="img/salon-02.webp" srcset="img/salon-02-s.webp 760w, img/salon-02.webp 1600w" sizes="100vw" width="1600" height="1066" alt="Main dining room" fetchpriority="low" loading="lazy" decoding="async"></picture></figure></div>
   <div class="wrap hero-in">
     <span class="eyebrow">Fire, sea and Dominican tradition</span>
     <h1>Seafood &amp; steakhouse restaurant <em>in Santiago</em></h1>
@@ -491,6 +519,7 @@ h1,h2,h3,.lead,.ocasiones li,.faq-list summary{overflow-wrap:break-word}
       <a class="badge" href="https://www.tripadvisor.com/Restaurant_Review-g635962-d28003769-Reviews-Amigos_Seafood_Steakhouse-Santiago_de_los_Caballeros_Santiago_Province_Dominican.html" target="_blank" rel="noopener"><b>4.9</b>Rating on Tripadvisor</a>
     </div>
   </div>
+<div class="hero-nav" aria-label="Amigos photos"><span class="hcap" aria-live="polite">Our home</span><div class="hdots"><button type="button" class="hd on" aria-label="Our home" data-i="0"></button><button type="button" class="hd" aria-label="Cherry blossom room" data-i="1"></button><button type="button" class="hd" aria-label="Amigas Bar &amp; Lounge" data-i="2"></button><button type="button" class="hd" aria-label="The lounge" data-i="3"></button><button type="button" class="hd" aria-label="Main dining room" data-i="4"></button></div></div>
 </section>
 
 <section class="sec promesa" id="about">
@@ -698,6 +727,23 @@ h1,h2,h3,.lead,.ocasiones li,.faq-list summary{overflow-wrap:break-word}
   function selTab(t,focus){tabs.forEach(function(x){var on=x===t;x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;document.getElementById(x.getAttribute('aria-controls')).classList.toggle('on',on);});if(focus)t.focus();t.scrollIntoView({block:'nearest',inline:'center',behavior:'smooth'});}
   tabs.forEach(function(t,i){t.addEventListener('click',function(){selTab(t)});t.addEventListener('keydown',function(e){if(e.key==='ArrowRight')selTab(tabs[(i+1)%tabs.length],true);if(e.key==='ArrowLeft')selTab(tabs[(i-1+tabs.length)%tabs.length],true);});});
 
+
+  // ---- Portada con varias fotos
+  (function(){
+    var sl=[].slice.call(document.querySelectorAll('.hero-img .sl')); if(sl.length<2)return;
+    var dots=[].slice.call(document.querySelectorAll('.hd')), cap=document.querySelector('.hcap'), i=0, t=null;
+    var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function go(n){sl[i].classList.remove('on');sl[i].setAttribute('aria-hidden','true');if(dots[i])dots[i].classList.remove('on');
+      i=(n+sl.length)%sl.length;sl[i].classList.add('on');sl[i].removeAttribute('aria-hidden');if(dots[i])dots[i].classList.add('on');if(cap)cap.textContent=sl[i].dataset.cap;}
+    function play(){stop();if(!rm)t=setInterval(function(){go(i+1)},5500);}
+    function stop(){if(t){clearInterval(t);t=null;}}
+    dots.forEach(function(d){d.addEventListener('click',function(){go(+d.dataset.i);play();});});
+    document.addEventListener('visibilitychange',function(){document.hidden?stop():play();});
+    var hero=document.querySelector('.hero'),sx=null;
+    hero.addEventListener('touchstart',function(e){sx=e.touches[0].clientX},{passive:true});
+    hero.addEventListener('touchend',function(e){if(sx===null)return;var dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>60){go(i+(dx<0?1:-1));play();}sx=null;});
+    play();
+  })();
 
   // ---- Mapa bajo demanda
   document.querySelectorAll('[data-map]').forEach(function(b){b.addEventListener('click',function(){var box=b.closest('.mapa');box.innerHTML='<iframe title="Mapa de Amigos Seafood & Steak House" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=19.4527697,-70.68533&z=17&output=embed"></iframe>';});});
