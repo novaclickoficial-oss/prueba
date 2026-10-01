@@ -2,7 +2,40 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "headers": [
-    { "source": "/img/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }] },
-    { "source": "/fonts/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }] }
+    {
+      "source": "/img/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/fonts/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/links",
+      "destination": "/informacion",
+      "permanent": true
+    },
+    {
+      "source": "/info",
+      "destination": "/informacion",
+      "permanent": true
+    },
+    {
+      "source": "/enlaces",
+      "destination": "/informacion",
+      "permanent": true
+    }
   ]
 }
