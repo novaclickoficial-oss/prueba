@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es-DO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Página no encontrada | Amigos Seafood &amp; Steak House</title>
+<meta name="robots" content="noindex, follow">
+<meta name="description" content="La página que buscas no existe. Vuelve al inicio, mira la carta o reserva tu mesa en Amigos Seafood &amp; Steak House, Santiago.">
+<link rel="icon" href="/img/logo-160.webp" type="image/webp">
+<style>
+@font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/cormorant-garamond-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"Cormorant Garamond";font-style:italic;font-weight:500;font-display:swap;src:url(/fonts/cormorant-garamond-latin-500-italic.woff2) format("woff2")}
+@font-face{font-family:"Manrope";font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/manrope-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Manrope";font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/manrope-latin-700-normal.woff2) format("woff2")}
+:root{
+  --noche:#121014; --rojo:#BF2A22; --ambar:#D9A05B; --ambar-suave:#E9C48F;
+  --hueso:#FAF6EF; --gutter:clamp(16px,4vw,40px);
+  --serif:"Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --sans:"Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:4px;padding:48px var(--gutter);text-align:center;
+  background:var(--noche);color:var(--hueso);font-family:var(--sans)}
+.logo{width:92px;height:92px;margin-bottom:26px}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;margin:0;
+  font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--ambar)}
+.eyebrow::before,.eyebrow::after{content:"";width:28px;height:1px;background:currentColor;opacity:.7}
+.num{font-family:var(--serif);font-weight:500;line-height:.9;font-size:clamp(88px,18vw,180px);
+  color:rgba(233,196,143,.22);margin:6px 0 -6px;letter-spacing:.02em}
+h1{font-family:var(--serif);font-weight:500;font-size:clamp(32px,5.4vw,56px);line-height:1.08;margin:0 0 18px}
+h1 em{font-style:italic;color:var(--ambar-suave)}
+p{max-width:46ch;margin:0 0 34px;font-size:clamp(15px,1.5vw,17px);line-height:1.6;color:rgba(250,246,239,.72)}
+.btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 26px;
+  font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;
+  border-radius:2px;border:1px solid transparent;transition:background .25s,color .25s,border-color .25s}
+.btn-rojo{background:var(--rojo);color:#fff}
+.btn-rojo:hover{background:#DB3A2C}
+.btn-linea{border-color:rgba(250,246,239,.42);color:var(--hueso)}
+.btn-linea:hover{border-color:var(--ambar);color:var(--ambar-suave)}
+@media (max-width:420px){.btn{width:100%}}
+</style>
+</head>
+<body>
+  <a href="/" aria-label="Amigos Seafood &amp; Steak House"><img class="logo" src="/img/logo-160.webp" width="160" height="160" alt="Logo de Amigos Seafood &amp; Steak House"></a>
+  <p class="eyebrow">Página no encontrada</p>
+  <div class="num" aria-hidden="true">404</div>
+  <h1>Esta página <em>no existe</em>.</h1>
+  <p>Puede que el enlace esté roto o que la hayamos movido de sitio. Desde aquí llegas a todo lo demás.</p>
+  <div class="btns">
+    <a class="btn btn-rojo" href="/">Ir al inicio</a>
+    <a class="btn btn-linea" href="/carta">Ver la carta</a>
+    <a class="btn btn-linea" href="https://wa.me/18092260026?text=%C2%A1Hola%2C%20Amigos%21%20Me%20gustar%C3%ADa%20reservar%20una%20mesa." target="_blank" rel="noopener">Reservar por WhatsApp</a>
+  </div>
+</body>
+</html>
