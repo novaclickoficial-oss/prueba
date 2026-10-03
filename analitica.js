@@ -7,7 +7,7 @@
  * Google no se carga hasta que la persona acepta. Quien rechaza o no responde
  * no llega a tocar un servidor de Google desde este sitio. */
 (function () {
-  var GA_ID = 'G-XXXXXXXXXX';
+  var GA_ID = 'G-NBHWTVC66B';
   var CLAVE = 'amigos-consentimiento';   // 'si' | 'no'
   if (GA_ID.indexOf('XXXX') !== -1) return;
 
