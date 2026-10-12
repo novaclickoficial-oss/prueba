@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Amigos Seafood &amp; Steak House | Restaurante de mariscos y carnes en Santiago, RD</title>
-<meta name="description" content="Restaurante de mariscos y steakhouse en Santiago de los Caballeros. Cortes Angus, langosta, mofongo y cocina criolla. Primer restaurante dominicano con Récord Guinness. Reserva por WhatsApp.">
+<title>Amigos Seafood &amp; Steak House · Mariscos y carnes, Santiago</title>
+<meta name="description" content="Restaurante de mariscos y steakhouse en Santiago de los Caballeros. Cortes Angus, langosta y mofongo. Primer restaurante dominicano con Récord Guinness.">
 <link rel="canonical" href="https://amigosseafoodsteakhouse.com/">
 <link rel="alternate" hreflang="es-DO" href="https://amigosseafoodsteakhouse.com/"><link rel="alternate" hreflang="en" href="https://amigosseafoodsteakhouse.com/en"><link rel="alternate" hreflang="x-default" href="https://amigosseafoodsteakhouse.com/">
 <meta name="robots" content="index,follow,max-image-preview:large">
@@ -12,9 +12,9 @@
 <meta name="geo.region" content="DO-25"><meta name="geo.placename" content="Santiago de los Caballeros"><meta name="geo.position" content="19.4527697;-70.68533"><meta name="ICBM" content="19.4527697, -70.68533">
 <meta property="og:type" content="restaurant"><meta property="og:site_name" content="Amigos Seafood &amp; Steak House">
 <meta property="og:locale" content="es_DO">
-<meta property="og:title" content="Amigos Seafood &amp; Steak House | Restaurante de mariscos y carnes en Santiago, RD"><meta property="og:description" content="Restaurante de mariscos y steakhouse en Santiago de los Caballeros. Cortes Angus, langosta, mofongo y cocina criolla. Primer restaurante dominicano con Récord Guinness. Reserva por WhatsApp.">
+<meta property="og:title" content="Amigos Seafood &amp; Steak House · Mariscos y carnes, Santiago"><meta property="og:description" content="Restaurante de mariscos y steakhouse en Santiago de los Caballeros. Cortes Angus, langosta y mofongo. Primer restaurante dominicano con Récord Guinness.">
 <meta property="og:url" content="https://amigosseafoodsteakhouse.com/"><meta property="og:image" content="https://amigosseafoodsteakhouse.com/img/fachada-02.webp"><meta property="og:image:alt" content="Amigos Seafood &amp; Steak House, Santiago">
-<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Amigos Seafood &amp; Steak House | Restaurante de mariscos y carnes en Santiago, RD"><meta name="twitter:description" content="Restaurante de mariscos y steakhouse en Santiago de los Caballeros. Cortes Angus, langosta, mofongo y cocina criolla. Primer restaurante dominicano con Récord Guinness. Reserva por WhatsApp."><meta name="twitter:image" content="https://amigosseafoodsteakhouse.com/img/fachada-02.webp">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Amigos Seafood &amp; Steak House · Mariscos y carnes, Santiago"><meta name="twitter:description" content="Restaurante de mariscos y steakhouse en Santiago de los Caballeros. Cortes Angus, langosta y mofongo. Primer restaurante dominicano con Récord Guinness."><meta name="twitter:image" content="https://amigosseafoodsteakhouse.com/img/fachada-02.webp">
 <link rel="icon" type="image/png" href="img/logo-64.png"><link rel="apple-touch-icon" href="img/logo-160.png">
 <link rel="preload" as="font" type="font/woff2" href="fonts/cormorant-garamond-latin-500-normal.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="fonts/manrope-latin-400-normal.woff2" crossorigin>
@@ -863,7 +863,7 @@ h1,h2,h3,.lead,.ocasiones li,.faq-list summary{overflow-wrap:break-word}
 
   var imgs=[].slice.call(document.querySelectorAll('img[data-lb]'));
   var lb=document.getElementById('lb'), li=lb.querySelector('img'), cnt=lb.querySelector('.cnt'), idx=0;
-  function show(i){idx=(i+imgs.length)%imgs.length;var im=imgs[idx];li.src=im.getAttribute('data-lb');li.alt=im.alt;cnt.textContent=(idx+1)+' / '+imgs.length;}
+  function show(i){idx=(i+imgs.length)%imgs.length;var im=imgs[idx];li.src=im.getAttribute('data-lb');li.alt=im.alt||'';li.alt=im.alt;cnt.textContent=(idx+1)+' / '+imgs.length;}
   function open(i){show(i);lb.classList.add('on');document.body.style.overflow='hidden';}
   function close(){lb.classList.remove('on');document.body.style.overflow='';}
   imgs.forEach(function(im,i){im.addEventListener('click',function(){open(i)})});

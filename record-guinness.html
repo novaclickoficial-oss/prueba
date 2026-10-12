@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Récord Guinness: el mofongo más grande del mundo | Amigos, Santiago</title>
-<meta name="description" content="Amigos Seafood &amp; Steak House preparó en Santiago el mofongo más grande del mundo, de 556 kg, y se convirtió en el primer restaurante dominicano con un Récord Guinness.">
+<title>El mofongo más grande del mundo | Récord Guinness</title>
+<meta name="description" content="Amigos preparó en Santiago el mofongo más grande del mundo: 556 kg, certificado por Guinness World Records el 26 de julio de 2025.">
 <link rel="canonical" href="https://amigosseafoodsteakhouse.com/record-guinness">
 
 <meta name="robots" content="index,follow,max-image-preview:large">
@@ -12,9 +12,9 @@
 <meta name="geo.region" content="DO-25"><meta name="geo.placename" content="Santiago de los Caballeros"><meta name="geo.position" content="19.4527697;-70.68533"><meta name="ICBM" content="19.4527697, -70.68533">
 <meta property="og:type" content="restaurant"><meta property="og:site_name" content="Amigos Seafood &amp; Steak House">
 <meta property="og:locale" content="es_DO">
-<meta property="og:title" content="Récord Guinness: el mofongo más grande del mundo | Amigos, Santiago"><meta property="og:description" content="Amigos Seafood &amp; Steak House preparó en Santiago el mofongo más grande del mundo, de 556 kg, y se convirtió en el primer restaurante dominicano con un Récord Guinness.">
+<meta property="og:title" content="El mofongo más grande del mundo | Récord Guinness"><meta property="og:description" content="Amigos preparó en Santiago el mofongo más grande del mundo: 556 kg, certificado por Guinness World Records el 26 de julio de 2025.">
 <meta property="og:url" content="https://amigosseafoodsteakhouse.com/record-guinness"><meta property="og:image" content="https://amigosseafoodsteakhouse.com/img/guinness-02.webp"><meta property="og:image:alt" content="Amigos Seafood &amp; Steak House, Santiago">
-<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Récord Guinness: el mofongo más grande del mundo | Amigos, Santiago"><meta name="twitter:description" content="Amigos Seafood &amp; Steak House preparó en Santiago el mofongo más grande del mundo, de 556 kg, y se convirtió en el primer restaurante dominicano con un Récord Guinness."><meta name="twitter:image" content="https://amigosseafoodsteakhouse.com/img/guinness-02.webp">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="El mofongo más grande del mundo | Récord Guinness"><meta name="twitter:description" content="Amigos preparó en Santiago el mofongo más grande del mundo: 556 kg, certificado por Guinness World Records el 26 de julio de 2025."><meta name="twitter:image" content="https://amigosseafoodsteakhouse.com/img/guinness-02.webp">
 <link rel="icon" type="image/png" href="img/logo-64.png"><link rel="apple-touch-icon" href="img/logo-160.png">
 <link rel="preload" as="font" type="font/woff2" href="fonts/cormorant-garamond-latin-500-normal.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="fonts/manrope-latin-400-normal.woff2" crossorigin>
@@ -630,7 +630,7 @@ h1,h2,h3,.lead,.ocasiones li,.faq-list summary{overflow-wrap:break-word}
 
   var imgs=[].slice.call(document.querySelectorAll('img[data-lb]'));
   var lb=document.getElementById('lb'), li=lb.querySelector('img'), cnt=lb.querySelector('.cnt'), idx=0;
-  function show(i){idx=(i+imgs.length)%imgs.length;var im=imgs[idx];li.src=im.getAttribute('data-lb');li.alt=im.alt;cnt.textContent=(idx+1)+' / '+imgs.length;}
+  function show(i){idx=(i+imgs.length)%imgs.length;var im=imgs[idx];li.src=im.getAttribute('data-lb');li.alt=im.alt||'';li.alt=im.alt;cnt.textContent=(idx+1)+' / '+imgs.length;}
   function open(i){show(i);lb.classList.add('on');document.body.style.overflow='hidden';}
   function close(){lb.classList.remove('on');document.body.style.overflow='';}
   imgs.forEach(function(im,i){im.addEventListener('click',function(){open(i)})});
