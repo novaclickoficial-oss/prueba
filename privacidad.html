@@ -570,7 +570,7 @@ h1,h2,h3,.lead,.ocasiones li,.faq-list summary{overflow-wrap:break-word}
 
   var imgs=[].slice.call(document.querySelectorAll('img[data-lb]'));
   var lb=document.getElementById('lb'), li=lb.querySelector('img'), cnt=lb.querySelector('.cnt'), idx=0;
-  function show(i){idx=(i+imgs.length)%imgs.length;var im=imgs[idx];li.src=im.getAttribute('data-lb');li.alt=im.alt;cnt.textContent=(idx+1)+' / '+imgs.length;}
+  function show(i){idx=(i+imgs.length)%imgs.length;var im=imgs[idx];li.src=im.getAttribute('data-lb');li.alt=im.alt||'';li.alt=im.alt;cnt.textContent=(idx+1)+' / '+imgs.length;}
   function open(i){show(i);lb.classList.add('on');document.body.style.overflow='hidden';}
   function close(){lb.classList.remove('on');document.body.style.overflow='';}
   imgs.forEach(function(im,i){im.addEventListener('click',function(){open(i)})});
